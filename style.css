@@ -3063,4 +3063,43 @@ body.roman-glitch-active {
         0 0 10px rgba(255,255,255,0.7),
         0 0 25px rgba(255,255,255,0.4);
 
+
+
+
+    }
+
+
+
+
+    /* =====================================
+   ろまん・隠しプロフィール
+===================================== */
+
+/* 最初は完全に隠す */
+.roman-secret-profile {
+    display: none;
+}
+
+/* 3回クリックされたら表示 */
+.roman-secret-profile.show {
+    display: block;
+    animation: romanSecretAppear 0.8s ease forwards;
+}
+
+
+/* 隠しプロフィール登場アニメーション */
+@keyframes romanSecretAppear {
+
+    0% {
+        opacity: 0;
+        transform: translateY(30px);
+        filter: blur(8px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+        filter: blur(0);
+    }
+
 }
