@@ -2505,3 +2505,11 @@ body.roman-glitch-active {
         font-size: 28px;
     }
 }
+
+
+.movie-video iframe {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 9;
+    border: none;
+}
