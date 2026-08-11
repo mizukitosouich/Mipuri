@@ -1,21 +1,26 @@
+/* =========================================
+   基本設定
+========================================= */
+
 body {
-margin: 0;
-background-color: #f7f0ff;
-color: #333333;
-font-family:  sans-serif;
-}  
-
-header{
- display: flex;
- justify-content: space-between;
- align-items: center;
-
- padding: 20px 50px;
-
- background-color: white;
-
+    margin: 0;
+    background-color: #f7f0ff;
+    color: #333333;
+    font-family: sans-serif;
 }
 
+
+/* =========================================
+   ヘッダー
+========================================= */
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 50px;
+    background-color: white;
+}
 
 .logo img {
     width: 180px;
@@ -23,18 +28,20 @@ header{
     display: block;
 }
 
-nav a{
+nav a {
     margin-left: 25px;
-
     color: #555555;
     text-decoration: none;
     font-weight: bold;
-
 }
 
-.hero{
-    text-align: center;
 
+/* =========================================
+   HOME
+========================================= */
+
+.hero {
+    text-align: center;
     padding: 120px 20px;
 
     background: linear-gradient(
@@ -44,30 +51,41 @@ nav a{
     );
 }
 
-.hero h1{
- font-size: 42px;
- color: #e86fa8;
- margin-top: 30px;
+.hero h1 {
+    font-size: 42px;
+    color: #e86fa8;
+    margin-top: 30px;
 }
 
-.hero p{
+.hero h2 {
+    font-size: 36px;
+    color: #e86fa8;
+}
+
+.hero p {
     font-size: 20px;
 }
 
-/* =========================
+.hero img {
+    width: 100%;
+    max-width: 500px;
+    border-radius: 20px;
+    border: 5px solid white;
+    box-shadow: 0 8px 25px rgba(130, 217, 245, 0.4);
+}
+
+
+/* =========================================
    HOME 作品を見るボタン
-========================= */
+========================================= */
 
 .hero-button {
     display: inline-block;
-
     margin-top: 30px;
-
     padding: 15px 45px;
 
     border-radius: 50px;
 
-    /* ふんわりピンク～水色 */
     background: linear-gradient(
         135deg,
         #ffb6d9,
@@ -75,21 +93,17 @@ nav a{
     );
 
     color: white;
-
     text-decoration: none;
 
     font-size: 18px;
     font-weight: bold;
 
-    /* 白い縁取り */
     border: 4px solid white;
 
-    /* ぷっくりした影 */
     box-shadow:
         0 6px 0 #e89ac2,
         0 10px 25px rgba(150, 190, 220, 0.35);
 
-    /* 文字を少し見やすく */
     text-shadow:
         0 2px 4px rgba(180, 130, 170, 0.3);
 
@@ -98,11 +112,7 @@ nav a{
         box-shadow 0.2s;
 }
 
-
-/* マウスを乗せたとき */
-
 .hero-button:hover {
-
     transform: translateY(-5px);
 
     box-shadow:
@@ -110,11 +120,7 @@ nav a{
         0 15px 30px rgba(150, 190, 220, 0.4);
 }
 
-
-/* 押した瞬間 */
-
 .hero-button:active {
-
     transform: translateY(2px);
 
     box-shadow:
@@ -122,62 +128,106 @@ nav a{
         0 6px 15px rgba(150, 190, 220, 0.3);
 }
 
-.news{
- max-width: 800px;
- margin: 60px auto;
- padding: 0 20px;
 
-}
+/* =========================================
+   STORY
+========================================= */
 
-.news h2{
-    
-    color: #947fbe;
-    
-    border-bottom: 2px solid #947fbe;
+.story {
+    width: 100%;
+    box-sizing: border-box;
 
-    padding-bottom: 10px;
-}
-
-
-.news article{
- display: flex;
- gap: 30px;   
- padding: 15px 0;
- border-bottom: 1px solid #dddddd;
-}
-
-.news time{
-    color: #947fbe;
-    font-weight: bold;
-}
-
-footer{
-    margin-top: 80px;
-
-    padding: 30px;
+    padding: 100px 20px;
 
     text-align: center;
 
-    background-color: #333333;
-    
-    color: #ffffff;
+    background: linear-gradient(
+        135deg,
+        #fff5fb,
+        #f0faff
+    );
 }
 
-.hero img{
-    max-width: 90%;
-    max-width: 500px;
+.story-subtitle {
+    margin: 0 0 5px;
 
-    border-radius: 20px;
+    color: #72cfe8;
+    font-size: 18px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
 
-    border: 5px solid white;
+.story h2 {
+    margin: 0 0 45px;
 
-    box-shadow: 0 8px 25px rgba(130, 217, 245, 0.4);
+    color: #e86fa8;
+    font-size: 38px;
+}
+
+.story-box {
+    max-width: 850px;
+    margin: 0 auto;
+
+    padding: 50px 60px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 10px 35px rgba(150, 180, 220, 0.2);
+
+    border: 3px solid rgba(255, 255, 255, 0.8);
+}
+
+.story-title {
+    margin-bottom: 35px;
+
+    color: #947fbe;
+
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.story-title span {
+    color: #f3a6cc;
+    margin: 0 10px;
+}
+
+.story-box p {
+    max-width: 850px;
+
+    margin: 15px auto;
+
+    color: #555555;
+
+    font-size: 18px;
+    line-height: 2;
+}
+
+.story-decoration {
+    margin-top: 35px;
+
+    color: #e86fa8;
+
+    font-size: 22px;
+    letter-spacing: 8px;
 }
 
 
+/* =========================================
+   CHARACTER
+========================================= */
 
 .character {
+    width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+
     padding: 80px 20px;
+
     text-align: center;
 
     background: linear-gradient(
@@ -185,32 +235,31 @@ footer{
         #fff5fb,
         #dff7ff
     );
-
-    width: 100%;
-    box-sizing: border-box;
-
-    overflow: hidden;
 }
 
 .character h2 {
+    margin: 0 0 5px;
+
     font-size: 36px;
     color: #e86fa8;
-    margin: 0 0 5px;
 }
 
 .section-subtitle {
-    color: #72cfe8;
-    font-size: 18px;
     margin: 0 0 40px;
+
+    color: #72cfe8;
+
+    font-size: 18px;
 }
 
 
-/* キャラクター全体 */
+/* =========================================
+   キャラクタースライダー
+========================================= */
 
 .character-slider {
     display: flex;
     align-items: center;
-
     gap: 15px;
 
     width: 100%;
@@ -221,10 +270,8 @@ footer{
     box-sizing: border-box;
 }
 
-/* キャラクターを横に並べる部分 */
 .character-list {
     display: flex;
-
     gap: 30px;
 
     flex: 1;
@@ -239,7 +286,6 @@ footer{
 
     scroll-behavior: smooth;
 }
-
 
 
 /* スクロールバー */
@@ -259,7 +305,10 @@ footer{
 }
 
 
-/* キャラクターカード */
+/* =========================================
+   キャラクターカード
+========================================= */
+
 .character-card {
     flex: 0 0 300px;
 
@@ -271,16 +320,28 @@ footer{
 
     border-radius: 30px;
 
-    box-shadow: 0 10px 30px rgba(150, 180, 220, 0.2);
+    box-shadow:
+        0 10px 30px rgba(150, 180, 220, 0.2);
 
     text-decoration: none;
     color: inherit;
 
     display: block;
 
-    transition: transform 0.2s, box-shadow 0.2s;
+    transition:
+        transform 0.2s,
+        box-shadow 0.2s;
 }
 
+.character-card:hover {
+    text-decoration: none;
+    color: inherit;
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 35px rgba(150, 180, 220, 0.3);
+}
 
 
 /* キャラクター画像 */
@@ -309,25 +370,27 @@ footer{
     display: block;
 }
 
+
 /* キャラクター名 */
 
 .character-card h3 {
-    color: #e86fa8;
-    font-size: 25px;
-
     margin: 25px 0 10px;
+
+    color: #e86fa8;
+
+    font-size: 25px;
 }
 
 
 /* キャラクター紹介文 */
 
 .character-card p {
+    margin: 0;
+
     color: #666666;
 
     font-size: 16px;
     line-height: 1.8;
-
-    margin: 0;
 }
 
 
@@ -353,7 +416,8 @@ footer{
 
     cursor: pointer;
 
-    box-shadow: 0 5px 15px rgba(150, 180, 220, 0.25);
+    box-shadow:
+        0 5px 15px rgba(150, 180, 220, 0.25);
 
     display: flex;
     align-items: center;
@@ -363,12 +427,288 @@ footer{
 }
 
 
+/* =========================================
+   CHARACTER LIST PAGE
+========================================= */
+
+.character-page {
+    min-height: 100vh;
+
+    padding: 100px 7%;
+
+    box-sizing: border-box;
+
+    background:
+        radial-gradient(
+            circle at 10% 20%,
+            rgba(255, 190, 230, 0.35),
+            transparent 25%
+        ),
+        radial-gradient(
+            circle at 90% 70%,
+            rgba(160, 230, 255, 0.35),
+            transparent 25%
+        ),
+        linear-gradient(
+            135deg,
+            #fff8fc,
+            #f1fcff
+        );
+}
 
 
+/* タイトル */
 
-/* =========================
+.character-page-title {
+    text-align: center;
+    margin-bottom: 55px;
+}
+
+.character-page-title p {
+    margin: 0;
+
+    color: #71cde5;
+
+    font-size: 15px;
+    font-weight: bold;
+
+    letter-spacing: 5px;
+}
+
+.character-page-title h1 {
+    margin: 8px 0 15px;
+
+    color: #eb8dc4;
+
+    font-size: 42px;
+    font-weight: 800;
+
+    text-shadow:
+        2px 2px 0 white,
+        0 0 12px rgba(255, 160, 220, 0.35);
+}
+
+.character-page-title span {
+    display: block;
+
+    width: 90px;
+    height: 4px;
+
+    margin: auto;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ff9ed8,
+            #8ce2f5
+        );
+}
+
+
+/* =========================================
+   3 × 3 キャラクターGRID
+========================================= */
+
+.character-grid {
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 28px;
+}
+
+
+/* カード */
+
+.character-page-card {
+    position: relative;
+
+    overflow: hidden;
+
+    display: block;
+
+    height: 350px;
+
+    text-decoration: none;
+
+    border-radius: 30px;
+
+    background: white;
+
+    border: 3px solid white;
+
+    box-shadow:
+        0 8px 25px rgba(170, 190, 220, 0.25);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+}
+
+.character-page-card:hover {
+    transform:
+        translateY(-8px)
+        scale(1.02);
+
+    box-shadow:
+        0 15px 35px rgba(225, 145, 205, 0.35);
+}
+
+
+/* キャラクター画像 */
+
+.character-page-image {
+    width: 100%;
+    height: 275px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+
+    background:
+        radial-gradient(
+            circle,
+            #ffffff,
+            #e9faff
+        );
+}
+
+.character-page-image img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: contain;
+
+    transition:
+        transform 0.4s ease;
+}
+
+.character-page-card:hover .character-page-image img {
+    transform: scale(1.06);
+}
+
+
+/* 名前 */
+
+.character-page-name {
+    position: absolute;
+
+    left: 0;
+    bottom: 0;
+
+    width: 100%;
+    height: 95px;
+
+    padding: 12px 18px;
+
+    box-sizing: border-box;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            180deg,
+            rgba(255,255,255,0),
+            rgba(255,255,255,0.97) 25%
+        );
+}
+
+.character-page-name h3 {
+    margin: 15px 0 3px;
+
+    color: #e77fbb;
+
+    font-size: 20px;
+}
+
+.character-page-name p {
+    margin: 0;
+
+    color: #777;
+
+    font-size: 12px;
+}
+
+
+/* =========================================
+   キャラクターページ切り替え
+========================================= */
+
+.character-pagination {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-top: 55px;
+}
+
+.character-pagination button {
+    width: 48px;
+    height: 48px;
+
+    border: none;
+    border-radius: 50%;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ff9bd5,
+            #82dff3
+        );
+
+    color: white;
+
+    font-size: 30px;
+    line-height: 1;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 5px 15px rgba(220, 140, 200, 0.3);
+
+    transition:
+        transform 0.2s ease;
+}
+
+.character-pagination button:hover {
+    transform: scale(1.1);
+}
+
+.character-pagination button:disabled {
+    opacity: 0.3;
+
+    cursor: default;
+
+    transform: none;
+}
+
+#pageInfo {
+    min-width: 55px;
+
+    text-align: center;
+
+    color: #e687bd;
+
+    font-size: 16px;
+    font-weight: bold;
+}
+
+
+/* =========================================
    CHARACTER DETAIL
-========================= */
+========================================= */
 
 .character-detail {
     padding: 80px 20px;
@@ -398,6 +738,37 @@ footer{
     text-align: left;
 }
 
+
+/* =========================================
+   キャラクター詳細カード
+========================================= */
+
+.character-detail-box {
+    display: flex;
+
+    align-items: center;
+
+    gap: 60px;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    padding: 40px;
+
+    box-sizing: border-box;
+
+    background: rgba(255, 255, 255, 0.9);
+
+    border-radius: 35px;
+
+    box-shadow:
+        0 10px 35px rgba(150, 180, 220, 0.2);
+}
+
+
+/* 左側：画像 */
+
 .character-detail-image {
     flex: 1;
 
@@ -419,14 +790,72 @@ footer{
     display: block;
 }
 
+
+/* 詳細カード内の画像 */
+
+.character-detail-box .character-detail-image {
+    flex: 0 0 45%;
+
+    max-width: 450px;
+}
+
+.character-detail-box .character-detail-image img {
+    display: block;
+
+    width: 100%;
+    height: auto;
+}
+
+
+/* 右側：プロフィール */
+
 .character-detail-text {
     flex: 1;
 }
 
-.character-detail-text h2 {
-    color: #e86fa8;
+.character-detail-info {
+    flex: 1;
+
+    text-align: left;
+}
+
+
+/* 英字名前 */
+
+.character-detail-name-en {
+    margin: 0 0 8px;
+
+    color: #72cfe8;
+
+    font-size: 14px;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+}
+
+
+/* 名前 */
+
+.character-detail-text h2,
+.character-detail-info h2 {
+    color: #e88abb;
 
     font-size: 32px;
+
+    margin: 0 0 20px;
+}
+
+
+/* 紹介文 */
+
+.character-detail-catch {
+    margin: 0 0 30px;
+
+    color: #555;
+
+    font-size: 17px;
+
+    line-height: 1.9;
 }
 
 .character-detail-text p {
@@ -434,6 +863,38 @@ footer{
 
     color: #555;
 }
+
+
+/* プロフィール */
+
+.character-profile {
+    border-top: 2px solid #f4d8e8;
+}
+
+.profile-row {
+    display: flex;
+
+    padding: 12px 0;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.profile-row span {
+    flex: 0 0 100px;
+
+    color: #72cfe8;
+
+    font-weight: bold;
+}
+
+.profile-row p {
+    margin: 0;
+
+    color: #555;
+}
+
+
+/* DL形式プロフィール */
 
 .character-detail-text dl {
     margin-top: 30px;
@@ -452,6 +913,9 @@ footer{
 
     margin-top: 5px;
 }
+
+
+/* 戻るボタン */
 
 .back-button {
     display: inline-block;
@@ -476,127 +940,26 @@ footer{
 }
 
 
-
-.character-card:hover {
-    text-decoration: none;
-    color: inherit;
-
-    transform: translateY(-8px);
-
-    box-shadow:
-        0 15px 35px rgba(150, 180, 220, 0.3);
-}
-
-
-.story {
-    padding: 100px 20px;
-    text-align: center;
-
-    background: linear-gradient(
-        135deg,
-        #fff5fb,
-        #f0faff
-    );
-
-    box-sizing: border-box;
-}
-
-.story-subtitle {
-    margin: 0 0 5px;
-
-    color: #72cfe8;
-
-    font-size: 18px;
-    font-weight: bold;
-    letter-spacing: 2px;
-}
-
-.story h2 {
-    margin: 0 0 45px;
-
-    color: #e86fa8;
-
-    font-size: 38px;
-}
-
-/* ストーリー本文のカード */
-
-.story-box {
-    max-width: 850px;
-
-    margin: 0 auto;
-
-    padding: 50px 60px;
-
-    box-sizing: border-box;
-
-    background: rgba(255, 255, 255, 0.9);
-
-    border-radius: 35px;
-
-    box-shadow:
-        0 10px 35px rgba(150, 180, 220, 0.2);
-
-    border: 3px solid rgba(255, 255, 255, 0.8);
-}
-
-/* タイトル */
-
-.story-title {
-    margin-bottom: 35px;
-
-    color: #947fbe;
-
-    font-size: 28px;
-    font-weight: bold;
-}
-
-.story-title span {
-    color: #f3a6cc;
-
-    margin: 0 10px;
-}
-
-/* 本文 */
-
-.story-box p {
-    margin: 15px 0;
-
-    color: #555555;
-
-    font-size: 18px;
-
-    line-height: 2;
-}
-
-/* 下の飾り */
-
-.story-decoration {
-    margin-top: 35px;
-
-    color: #e86fa8;
-
-    font-size: 22px;
-
-    letter-spacing: 8px;
-}
-
-
-/* =========================
+/* =========================================
    NEWS
-========================= */
+========================================= */
 
 .news {
+    width: 100%;
+    box-sizing: border-box;
+
     padding: 80px 20px;
 
-    background: linear-gradient(
-        135deg,
-        #fff8fc,
-        #f0fbff
-    );
+    background:
+        linear-gradient(
+            135deg,
+            #fff8fc,
+            #f0fbff
+        );
 
-    max-width: none;
     margin: 0;
+
+    text-align: center;
 }
 
 .news > h2 {
@@ -633,6 +996,8 @@ footer{
 
     box-shadow:
         0 10px 30px rgba(150, 180, 220, 0.15);
+
+    text-align: left;
 }
 
 
@@ -646,13 +1011,25 @@ footer{
     padding: 30px 10px;
 
     border-bottom: 1px solid #eeeeee;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    transition:
+        transform 0.2s,
+        background-color 0.2s;
 }
-
-
-/* 最後だけ線を消す */
 
 .news-item:last-child {
     border-bottom: none;
+}
+
+.news-item:hover {
+    transform: translateX(5px);
+
+    background-color:
+        rgba(255, 230, 245, 0.35);
 }
 
 
@@ -723,656 +1100,11 @@ footer{
 }
 
 
-/* NEWSにマウスを乗せたとき */
-
-.news-item {
-    transition: transform 0.2s;
-}
-
-.news-item:hover {
-    transform: translateX(5px);
-    background-color: rgba(255, 230, 245, 0.35);
-}
-
-.hero-button {
-    display: inline-block;
-
-    margin-top: 20px;
-
-    padding: 12px 30px;
-
-    border-radius: 30px;
-
-    background-color: #947fbe;
-
-    color: white;
-
-    text-decoration: none;
-
-    font-size: 16px;
-
-    font-weight: bold;
-
-    transition: 0.2s;
-}
-
-.hero-button:hover {
-    transform: translateY(-3px);
-
-    box-shadow:
-        0 8px 20px rgba(150, 120, 190, 0.25);
-}
-
-/* =========================
-   MOVIE
-========================= */
-
-.movie-section {
-    width: 90%;
-    max-width: 1000px;
-    margin: 100px auto;
-    text-align: center;
-}
-
-/* ― ムービー ― */
-
-.movie-section .section-subtitle {
-    margin: 0 0 10px;
-
-    color: #7edce8;
-
-    font-size: 15px;
-    font-weight: bold;
-
-    letter-spacing: 0.15em;
-}
-
-/* =========================
-   MOVIE
-========================= */
-
-.movie-section {
-    width: 90%;
-    max-width: 1000px;
-    margin: 100px auto;
-    text-align: center;
-}
-
-/* ― ムービー ― */
-
-.movie-section .section-subtitle {
-    margin: 0 0 10px;
-    color: #7edce8;
-    font-size: 15px;
-    font-weight: bold;
-    letter-spacing: 0.15em;
-}
-
-/* MOVIE */
-
-.movie-section h1 {
-    margin: 0 0 50px;
-    color: #f49ac2;
-    font-size: 42px;
-    font-weight: bold;
-    letter-spacing: 0.1em;
-}
-
-/* 動画 */
-
-.movie-item {
-    width: 100%;
-    margin: 0 auto 70px;
-    text-align: center;
-}
-
-.movie-item h2 {
-    margin: 0 0 25px;
-    color: #555;
-    font-size: 25px;
-    font-weight: bold;
-}
-
-.movie-video {
-    width: 100%;
-    max-width: 900px;
-    margin: 0 auto;
-    overflow: hidden;
-    background: white;
-    border: 5px solid white;
-    border-radius: 22px;
-    box-shadow: 0 8px 25px rgba(244, 154, 194, 0.2);
-}
-
-.movie-video video {
-    display: block;
-    width: 100%;
-    height: auto;
-}
-
-.movie-caption {
-    margin: 18px 0 0;
-    color: #68cdd9;
-    font-size: 16px;
-    font-weight: bold;
-    letter-spacing: 0.05em;
-}
-
-@media screen and (max-width: 768px) {
-
-    /* ページ全体 */
-    body {
-        width: 100%;
-        overflow-x: hidden;
-    }
-
-    /* ヘッダー */
-    header {
-        width: 100%;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-
-    /* ロゴ */
-    .logo img {
-        max-width: 70%;
-        height: auto;
-    }
-
-    /* コンテンツ */
-    main {
-        width: 100%;
-        padding: 0 15px;
-        box-sizing: border-box;
-    }
-
-    /* 画像 */
-    img {
-        max-width: 100%;
-        height: auto;
-    }
-
-    /* YouTubeなどの動画 */
-    iframe {
-        max-width: 100%;
-        width: 100%;
-        height: auto;
-        aspect-ratio: 16 / 9;
-    }
-
-    /* 横並びの要素を縦並びに */
-    .container,
-    .content,
-    .items {
-        flex-direction: column;
-    }
-
-    /* 見出し */
-    h1 {
-        font-size: 26px;
-    }
-
-    h2 {
-        font-size: 22px;
-    }
-
-    h3 {
-        font-size: 19px;
-    }
-
-    /* 本文 */
-    p {
-        font-size: 15px;
-        line-height: 1.8;
-    }
-}
-
-/* =========================
-   スマホ対応
-========================= */
-
-@media (max-width: 768px) {
-
-    /* ヘッダー */
-    header {
-        padding: 15px 20px;
-        flex-direction: column;
-        gap: 15px;
-    }
-
-    .logo {
-        font-size: 20px;
-    }
-
-    nav {
-        display: flex;
-        justify-content: center;
-        flex-wrap: wrap;
-        gap: 10px;
-    }
-
-    nav a {
-        margin-left: 0;
-        font-size: 13px;
-    }
-
-
-    /* HOME */
-    .hero {
-        padding: 60px 20px;
-    }
-
-    .hero img {
-        width: 100%;
-        max-width: 450px;
-    }
-
-    .hero h2 {
-        font-size: 32px;
-    }
-
-    .hero p {
-        font-size: 16px;
-        line-height: 1.8;
-    }
-
-
-    /* STORY */
-    .story {
-        padding: 60px 20px;
-    }
-
-    .story h2 {
-        font-size: 32px;
-    }
-
-    .story p {
-        font-size: 15px;
-        line-height: 2;
-    }
-
-
-    /* CHARACTER */
-    .character {
-        padding: 60px 10px;
-    }
-
-    .character h2 {
-        font-size: 32px;
-    }
-
-    .section-subtitle {
-        font-size: 16px;
-    }
-
-
-    /* キャラクター一覧 */
-    .character-slider {
-        gap: 8px;
-    }
-
-    .character-list {
-        gap: 15px;
-        padding: 15px 5px;
-    }
-
-
-    /* キャラクターカード */
-    .character-card {
-        flex: 0 0 260px;
-        padding: 20px;
-    }
-
-
-    /* キャラクター画像 */
-    .character-image {
-        height: 240px;
-    }
-
-    .character-card h3 {
-        font-size: 22px;
-        margin: 20px 0 8px;
-    }
-
-    .character-card p {
-        font-size: 14px;
-        line-height: 1.7;
-    }
-
-
-    /* 左右のボタン */
-    .character-arrow {
-        width: 42px;
-        height: 42px;
-
-        flex: 0 0 42px;
-
-        font-size: 32px;
-        line-height: 42px;
-    }
-
-
-    /* NEWS */
-    .news {
-        margin: 40px auto;
-        padding: 0 20px;
-    }
-
-    .news h2 {
-        font-size: 30px;
-    }
-
-
-    /* キャラクター個人ページ */
-    .character-detail {
-        padding: 60px 20px;
-    }
-
-    .character-detail h1 {
-        font-size: 32px;
-        margin-bottom: 30px;
-    }
-
-    .character-detail-content {
-        flex-direction: column;
-        gap: 30px;
-        text-align: left;
-    }
-
-    .character-detail-image {
-        width: 100%;
-        max-width: 450px;
-    }
-
-    .character-detail-text {
-        width: 100%;
-    }
-
-    .character-detail-text h2 {
-        font-size: 27px;
-    }
-
-    .character-detail-text p {
-        font-size: 15px;
-        line-height: 1.9;
-    }
-
-    .character-detail-text dl {
-        margin-top: 25px;
-    }
-
-    .back-button {
-        margin-top: 40px;
-    }
-
-
-    /* フッター */
-    footer {
-        margin-top: 50px;
-        padding: 25px 15px;
-        font-size: 13px;
-    }
-
-}
-
-
-/* =========================
-   さらに小さいスマホ
-========================= */
-
-@media (max-width: 480px) {
-
-    /* ヘッダー */
-    header {
-        padding: 12px 10px;
-    }
-
-    .logo {
-        font-size: 18px;
-    }
-
-    nav {
-        gap: 7px;
-    }
-
-    nav a {
-        font-size: 11px;
-    }
-
-
-    /* HOME */
-    .hero {
-        padding: 40px 15px;
-    }
-
-    .hero h2 {
-        font-size: 28px;
-    }
-
-    .hero p {
-        font-size: 14px;
-    }
-
-
-    /* CHARACTER */
-    .character {
-        padding: 50px 5px;
-    }
-
-    .character h2 {
-        font-size: 28px;
-    }
-
-    .character-slider {
-        gap: 5px;
-    }
-
-    .character-list {
-        gap: 12px;
-        padding: 10px 3px;
-    }
-
-    .character-card {
-        flex: 0 0 240px;
-        padding: 15px;
-    }
-
-    .character-image {
-        height: 220px;
-    }
-
-    .character-card h3 {
-        font-size: 20px;
-    }
-
-    .character-card p {
-        font-size: 13px;
-    }
-
-
-    /* 矢印ボタン */
-    .character-arrow {
-        width: 36px;
-        height: 36px;
-
-        flex: 0 0 36px;
-
-        font-size: 28px;
-        line-height: 36px;
-    }
-
-
-    /* 個人ページ */
-    .character-detail {
-        padding: 45px 15px;
-    }
-
-    .character-detail h1 {
-        font-size: 28px;
-    }
-
-    .character-detail-text h2 {
-        font-size: 24px;
-    }
-
-}
-
-
-/* =========================
-   公式サイト風 登場演出
-========================= */
-
-body {
-    animation: pageFadeIn 1s ease;
-}
-
-@keyframes pageFadeIn {
-    from {
-        opacity: 0;
-    }
-
-    to {
-        opacity: 1;
-    }
-}
-
-
-/* HOMEのメイン画像 */
-
-.hero img {
-    animation: heroImageIn 1.2s ease;
-}
-
-@keyframes heroImageIn {
-    from {
-        opacity: 0;
-        transform: translateY(30px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-
-/* HOMEタイトル */
-
-.hero h2 {
-    animation: heroTextIn 1s ease 0.3s both;
-}
-
-.hero p {
-    animation: heroTextIn 1s ease 0.5s both;
-}
-
-.hero-button {
-    animation: heroTextIn 1s ease 0.7s both;
-}
-
-@keyframes heroTextIn {
-    from {
-        opacity: 0;
-        transform: translateY(20px);
-    }
-
-    to {
-        opacity: 1;
-        transform: translateY(0);
-    }
-}
-
-/* =========================
-   スクロール登場演出
-========================= */
-
-.scroll-fade {
-    opacity: 0;
-    transform: translateY(30px);
-    transition: opacity 0.8s ease, transform 0.8s ease;
-}
-
-.scroll-fade.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-/* =========================
-   文字・コンテンツ中央揃え
-========================= */
-
-.story,
-.character,
-.news,
-.movie-section {
-    width: 100%;
-    box-sizing: border-box;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.story,
-.news {
-    text-align: center;
-}
-
-.story-box,
-.news-list {
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.story p {
-    max-width: 850px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-.news-list {
-    text-align: left;
-}
-
-/* =========================
-   スクロール登場演出
-========================= */
-
-.scroll-fade {
-    opacity: 0;
-    transform: translateY(40px);
-    transition:
-        opacity 0.8s ease,
-        transform 0.8s ease;
-}
-
-.scroll-fade.show {
-    opacity: 1;
-    transform: translateY(0);
-}
-
-.news-item {
-    display: flex;
-
-    gap: 30px;
-
-    padding: 30px 10px;
-
-    border-bottom: 1px solid #eeeeee;
-
-    text-decoration: none;
-
-    color: inherit;
-
-    transition:
-        transform 0.2s,
-        background-color 0.2s;
-}
-
-/* =========================
+/* =========================================
    NEWS 詳細ページ
-========================= */
+========================================= */
 
 .news-detail {
-
     max-width: 900px;
 
     margin: 0 auto;
@@ -1380,14 +1112,9 @@ body {
     padding: 80px 20px;
 
     text-align: center;
-
 }
 
-
-/* NEWSタイトル */
-
 .news-detail h1 {
-
     margin: 15px 0 20px;
 
     color: #e86fa8;
@@ -1395,14 +1122,9 @@ body {
     font-size: 36px;
 
     line-height: 1.5;
-
 }
 
-
-/* 日付 */
-
 .news-detail-date {
-
     color: #947fbe;
 
     font-weight: bold;
@@ -1410,14 +1132,9 @@ body {
     font-size: 15px;
 
     margin-bottom: 15px;
-
 }
 
-
-/* カテゴリー */
-
 .news-detail-category {
-
     display: inline-block;
 
     padding: 6px 16px;
@@ -1431,14 +1148,9 @@ body {
     font-size: 13px;
 
     font-weight: bold;
-
 }
 
-
-/* 本文 */
-
 .news-detail-box {
-
     margin-top: 45px;
 
     padding: 50px;
@@ -1451,14 +1163,9 @@ body {
         0 10px 30px rgba(150, 180, 220, 0.2);
 
     text-align: left;
-
 }
 
-
-/* 本文 */
-
 .news-detail-box p {
-
     margin: 0 0 25px;
 
     color: #555;
@@ -1466,14 +1173,9 @@ body {
     font-size: 17px;
 
     line-height: 2;
-
 }
 
-
-/* 下の飾り */
-
 .news-detail-decoration {
-
     margin-top: 40px;
 
     text-align: center;
@@ -1483,45 +1185,12 @@ body {
     font-size: 22px;
 
     letter-spacing: 8px;
-
 }
 
 
-/* スマホ */
-
-@media (max-width: 768px) {
-
-    .news-detail {
-
-        padding: 60px 20px;
-
-    }
-
-
-    .news-detail h1 {
-
-        font-size: 27px;
-
-    }
-
-
-    .news-detail-box {
-
-        padding: 30px 20px;
-
-    }
-
-
-    .news-detail-box p {
-
-        font-size: 15px;
-
-    }
-
-}
-/* =========================
-NEWS専用ページ
-========================= */
+/* =========================================
+   NEWS 専用ページ
+========================================= */
 
 .news-page {
     width: 100%;
@@ -1540,9 +1209,6 @@ NEWS専用ページ
             #f0faff
         );
 }
-
-
-/* NEWSタイトル */
 
 .news-page > h1 {
     margin: 0 0 50px;
@@ -1572,8 +1238,7 @@ NEWS専用ページ
     border-radius: 30px;
 
     box-shadow:
-        0 10px 30px
-        rgba(150, 180, 220, 0.15);
+        0 10px 30px rgba(150, 180, 220, 0.15);
 }
 
 
@@ -1586,8 +1251,7 @@ NEWS専用ページ
 
     padding: 30px 10px;
 
-    border-bottom:
-        1px solid #eeeeee;
+    border-bottom: 1px solid #eeeeee;
 
     text-align: left;
 
@@ -1600,11 +1264,15 @@ NEWS専用ページ
         background-color 0.2s;
 }
 
-
-/* 最後の記事 */
-
 .news-page-item:last-child {
     border-bottom: none;
+}
+
+.news-page-item:hover {
+    transform: translateX(8px);
+
+    background:
+        rgba(255, 230, 245, 0.4);
 }
 
 
@@ -1629,9 +1297,6 @@ NEWS専用ページ
     flex: 1;
 }
 
-
-/* タイトル */
-
 .news-page-content h2 {
     margin: 8px 0 10px;
 
@@ -1639,9 +1304,6 @@ NEWS専用ページ
 
     font-size: 20px;
 }
-
-
-/* 説明 */
 
 .news-page-content p {
     margin: 0;
@@ -1654,66 +1316,16 @@ NEWS専用ページ
 }
 
 
-/* ホバー */
-
-.news-page-item:hover {
-
-    transform:
-        translateX(8px);
-
-    background:
-        rgba(255, 230, 245, 0.4);
-}
-
-
-/* NEWSページの戻るボタン */
+/* NEWSページ戻るボタン */
 
 .news-page .back-button {
-
     margin-top: 50px;
-
 }
 
 
-@media (max-width: 768px) {
-
-    .news-page {
-        padding: 60px 15px;
-    }
-
-    .news-page > h1 {
-        font-size: 32px;
-    }
-
-    .news-page-list {
-        padding: 5px 20px;
-    }
-
-    .news-page-item {
-        flex-direction: column;
-
-        gap: 8px;
-
-        padding: 25px 5px;
-    }
-
-    .news-page-item time {
-        flex: none;
-    }
-
-    .news-page-content h2 {
-        font-size: 18px;
-    }
-
-    .news-page-content p {
-        font-size: 14px;
-    }
-
-}
-
-/* =========================
-NEWS ページ切り替え
-========================= */
+/* =========================================
+   NEWS ページ切り替え
+========================================= */
 
 .news-pagination {
     display: flex;
@@ -1726,9 +1338,6 @@ NEWS ページ切り替え
     margin-top: 35px;
 }
 
-
-/* ページ番号 */
-
 #newsPageNumber {
     min-width: 60px;
 
@@ -1740,9 +1349,6 @@ NEWS ページ切り替え
 
     text-align: center;
 }
-
-
-/* 左右ボタン */
 
 .news-page-button {
     width: 45px;
@@ -1763,8 +1369,7 @@ NEWS ページ切り替え
     cursor: pointer;
 
     box-shadow:
-        0 5px 15px
-        rgba(150, 180, 220, 0.25);
+        0 5px 15px rgba(150, 180, 220, 0.25);
 
     transition:
         transform 0.2s,
@@ -1772,23 +1377,14 @@ NEWS ページ切り替え
         opacity 0.2s;
 }
 
-
-/* マウスを乗せたとき */
-
 .news-page-button:hover {
-
     transform: translateY(-3px);
 
     box-shadow:
-        0 8px 20px
-        rgba(150, 180, 220, 0.3);
+        0 8px 20px rgba(150, 180, 220, 0.3);
 }
 
-
-/* 押せないとき */
-
 .news-page-button:disabled {
-
     opacity: 0.35;
 
     cursor: default;
@@ -1796,97 +1392,243 @@ NEWS ページ切り替え
     transform: none;
 
     box-shadow:
-        0 3px 10px
-        rgba(150, 180, 220, 0.1);
+        0 3px 10px rgba(150, 180, 220, 0.1);
 }
 
 
 /* NEWS切り替えアニメーション */
 
 .news-page-list.news-changing {
-
     animation:
         newsSlide 0.35s ease;
 }
 
-
 @keyframes newsSlide {
-
     from {
-
         opacity: 0;
 
         transform:
             translateX(25px);
-
     }
 
     to {
-
         opacity: 1;
 
         transform:
             translateX(0);
-
     }
-
-}
-
-
-/* スマホ */
-
-@media (max-width: 768px) {
-
-    .news-pagination {
-
-        gap: 18px;
-
-        margin-top: 25px;
-
-    }
-
-
-    .news-page-button {
-
-        width: 40px;
-
-        height: 40px;
-
-        font-size: 28px;
-
-        line-height: 40px;
-
-    }
-
-
-    #newsPageNumber {
-
-        font-size: 14px;
-
-    }
-
 }
 
 
 /* =========================================
-   夜沙暗ろまん TVノイズ演出
-   ========================================= */
+   MOVIE
+========================================= */
 
-/* 名前 */
+.movie-section {
+    width: 90%;
+    max-width: 1000px;
+
+    margin: 100px auto;
+
+    text-align: center;
+}
+
+.movie-section .section-subtitle {
+    margin: 0 0 10px;
+
+    color: #7edce8;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.15em;
+}
+
+.movie-section h1 {
+    margin: 0 0 50px;
+
+    color: #f49ac2;
+
+    font-size: 42px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.1em;
+}
+
+
+/* 動画 */
+
+.movie-item {
+    width: 100%;
+
+    margin: 0 auto 70px;
+
+    text-align: center;
+}
+
+.movie-item h2 {
+    margin: 0 0 25px;
+
+    color: #555;
+
+    font-size: 25px;
+
+    font-weight: bold;
+}
+
+.movie-video {
+    width: 100%;
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    overflow: hidden;
+
+    background: white;
+
+    border: 5px solid white;
+
+    border-radius: 22px;
+
+    box-shadow:
+        0 8px 25px rgba(244, 154, 194, 0.2);
+}
+
+.movie-video video {
+    display: block;
+
+    width: 100%;
+
+    height: auto;
+}
+
+.movie-caption {
+    margin: 18px 0 0;
+
+    color: #68cdd9;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    letter-spacing: 0.05em;
+}
+
+
+/* =========================================
+   登場演出
+========================================= */
+
+body {
+    animation: pageFadeIn 1s ease;
+}
+
+@keyframes pageFadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+
+/* HOMEメイン画像 */
+
+.hero img {
+    animation: heroImageIn 1.2s ease;
+}
+
+@keyframes heroImageIn {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* HOMEタイトル */
+
+.hero h2 {
+    animation:
+        heroTextIn 1s ease 0.3s both;
+}
+
+.hero p {
+    animation:
+        heroTextIn 1s ease 0.5s both;
+}
+
+.hero-button {
+    animation:
+        heroTextIn 1s ease 0.7s both;
+}
+
+@keyframes heroTextIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+
+/* =========================================
+   スクロール登場演出
+========================================= */
+
+.scroll-fade {
+    opacity: 0;
+
+    transform: translateY(40px);
+
+    transition:
+        opacity 0.8s ease,
+        transform 0.8s ease;
+}
+
+.scroll-fade.show {
+    opacity: 1;
+
+    transform: translateY(0);
+}
+
+
+/* =========================================
+   ろまん TVノイズ演出
+========================================= */
+
 .roman-glitch-name {
     cursor: pointer;
+
     user-select: none;
 }
 
+
 /* 画面全体のTVノイズ */
+
 #tv-noise {
     position: fixed;
+
     inset: 0;
 
     width: 100vw;
     height: 100vh;
 
     z-index: 99999;
+
     pointer-events: none;
 
     opacity: 0;
@@ -1903,14 +1645,18 @@ NEWS ページ切り替え
     mix-blend-mode: difference;
 }
 
+
 /* ノイズ発生中 */
+
 #tv-noise.active {
-    animation: romanTVNoise 0.6s steps(8, end);
+    animation:
+        romanTVNoise 0.6s steps(8, end);
 }
 
-/* TV砂嵐 */
-@keyframes romanTVNoise {
 
+/* TV砂嵐 */
+
+@keyframes romanTVNoise {
     0% {
         opacity: 0;
         transform: translate(0, 0);
@@ -1963,11 +1709,13 @@ NEWS ページ切り替え
 }
 
 
-/* TVの横線 */
+/* TV横線 */
+
 #tv-noise::before {
     content: "";
 
     position: absolute;
+
     inset: 0;
 
     width: 100%;
@@ -1982,11 +1730,11 @@ NEWS ページ切り替え
             transparent 6px
         );
 
-    animation: romanTVLines 0.08s steps(2, end) infinite;
+    animation:
+        romanTVLines 0.08s steps(2, end) infinite;
 }
 
 @keyframes romanTVLines {
-
     0% {
         transform: translateY(0);
     }
@@ -2002,12 +1750,13 @@ NEWS ページ切り替え
 
 
 /* 画面全体をガタッとズラす */
+
 body.roman-glitch-active {
-    animation: romanScreenShake 0.6s steps(8, end);
+    animation:
+        romanScreenShake 0.6s steps(8, end);
 }
 
 @keyframes romanScreenShake {
-
     0% {
         transform: translate(0, 0);
         filter: none;
@@ -2046,12 +1795,13 @@ body.roman-glitch-active {
 
 
 /* ろまんの画像も一瞬バグる */
+
 .roman-image-glitch {
-    animation: romanImageGlitch 0.6s steps(6, end);
+    animation:
+        romanImageGlitch 0.6s steps(6, end);
 }
 
 @keyframes romanImageGlitch {
-
     0% {
         filter: none;
         transform: translate(0);
@@ -2108,570 +1858,274 @@ body.roman-glitch-active {
 }
 
 
-
 /* =========================================
-   CHARACTER LIST PAGE
-========================================= */
-
-.character-page {
-
-    min-height: 100vh;
-
-    padding: 100px 7% 100px;
-
-    background:
-        radial-gradient(
-            circle at 10% 20%,
-            rgba(255, 190, 230, 0.35),
-            transparent 25%
-        ),
-        radial-gradient(
-            circle at 90% 70%,
-            rgba(160, 230, 255, 0.35),
-            transparent 25%
-        ),
-        linear-gradient(
-            135deg,
-            #fff8fc,
-            #f1fcff
-        );
-
-}
-
-
-/* タイトル */
-
-.character-page-title {
-
-    text-align: center;
-
-    margin-bottom: 55px;
-
-}
-
-
-.character-page-title p {
-
-    margin: 0;
-
-    color: #71cde5;
-
-    font-size: 15px;
-
-    font-weight: bold;
-
-    letter-spacing: 5px;
-
-}
-
-
-.character-page-title h1 {
-
-    margin: 8px 0 15px;
-
-    color: #eb8dc4;
-
-    font-size: 42px;
-
-    font-weight: 800;
-
-    text-shadow:
-        2px 2px 0 white,
-        0 0 12px rgba(255, 160, 220, 0.35);
-
-}
-
-
-.character-page-title span {
-
-    display: block;
-
-    width: 90px;
-
-    height: 4px;
-
-    margin: auto;
-
-    border-radius: 10px;
-
-    background:
-        linear-gradient(
-            90deg,
-            #ff9ed8,
-            #8ce2f5
-        );
-
-}
-
-
-/* =========================================
-   3 × 3 GRID
-========================================= */
-
-.character-grid {
-
-    max-width: 1100px;
-
-    margin: 0 auto;
-
-    display: grid;
-
-    grid-template-columns:
-        repeat(3, 1fr);
-
-    gap: 28px;
-
-}
-
-
-/* カード */
-
-.character-page-card {
-
-    position: relative;
-
-    overflow: hidden;
-
-    display: block;
-
-    height: 350px;
-
-    text-decoration: none;
-
-    border-radius: 30px;
-
-    background: white;
-
-    border: 3px solid white;
-
-    box-shadow:
-        0 8px 25px
-        rgba(170, 190, 220, 0.25);
-
-    transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
-
-}
-
-
-.character-page-card:hover {
-
-    transform:
-        translateY(-8px)
-        scale(1.02);
-
-    box-shadow:
-        0 15px 35px
-        rgba(225, 145, 205, 0.35);
-
-}
-
-
-/* キャラクター画像 */
-
-.character-page-image {
-
-    width: 100%;
-
-    height: 275px;
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    overflow: hidden;
-
-    background:
-        radial-gradient(
-            circle,
-            #ffffff,
-            #e9faff
-        );
-
-}
-
-
-.character-page-image img {
-
-    width: 100%;
-
-    height: 100%;
-
-    object-fit: contain;
-
-    transition:
-        transform 0.4s ease;
-
-}
-
-
-.character-page-card:hover
-.character-page-image img {
-
-    transform: scale(1.06);
-
-}
-
-
-/* 名前 */
-
-.character-page-name {
-
-    position: absolute;
-
-    left: 0;
-
-    bottom: 0;
-
-    width: 100%;
-
-    height: 95px;
-
-    padding: 12px 18px;
-
-    box-sizing: border-box;
-
-    text-align: center;
-
-    background:
-        linear-gradient(
-            180deg,
-            rgba(255,255,255,0),
-            rgba(255,255,255,0.97) 25%
-        );
-
-}
-
-
-.character-page-name h3 {
-
-    margin:
-        15px 0 3px;
-
-    color: #e77fbb;
-
-    font-size: 20px;
-
-}
-
-
-.character-page-name p {
-
-    margin: 0;
-
-    color: #777;
-
-    font-size: 12px;
-
-}
-
-
-/* =========================================
-   ページ切り替え
-========================================= */
-
-.character-pagination {
-
-    display: flex;
-
-    align-items: center;
-
-    justify-content: center;
-
-    gap: 25px;
-
-    margin-top: 55px;
-
-}
-
-
-.character-pagination button {
-
-    width: 48px;
-
-    height: 48px;
-
-    border: none;
-
-    border-radius: 50%;
-
-    background:
-        linear-gradient(
-            135deg,
-            #ff9bd5,
-            #82dff3
-        );
-
-    color: white;
-
-    font-size: 30px;
-
-    line-height: 1;
-
-    cursor: pointer;
-
-    box-shadow:
-        0 5px 15px
-        rgba(220, 140, 200, 0.3);
-
-    transition:
-        transform 0.2s ease;
-
-}
-
-
-.character-pagination button:hover {
-
-    transform:
-        scale(1.1);
-
-}
-
-
-.character-pagination button:disabled {
-
-    opacity: 0.3;
-
-    cursor: default;
-
-    transform: none;
-
-}
-
-
-#pageInfo {
-
-    min-width: 55px;
-
-    text-align: center;
-
-    color: #e687bd;
-
-    font-size: 16px;
-
-    font-weight: bold;
-
-}
-
-
-/* =========================================
-   スマホ
+   スマホ対応
 ========================================= */
 
 @media screen and (max-width: 768px) {
 
-    .character-page {
-
-        padding:
-            70px 20px 80px;
-
+    body {
+        width: 100%;
+        overflow-x: hidden;
     }
 
 
-    .character-page-title {
+    /* ヘッダー */
 
-        margin-bottom: 35px;
+    header {
+        width: 100%;
 
+        padding: 15px 20px;
+
+        box-sizing: border-box;
+
+        flex-direction: column;
+
+        gap: 15px;
+    }
+
+    .logo img {
+        max-width: 70%;
+        height: auto;
+    }
+
+    .logo {
+        font-size: 20px;
+    }
+
+    nav {
+        display: flex;
+
+        justify-content: center;
+
+        flex-wrap: wrap;
+
+        gap: 10px;
+    }
+
+    nav a {
+        margin-left: 0;
+
+        font-size: 13px;
     }
 
 
-    .character-page-title h1 {
+    /* コンテンツ */
+
+    main {
+        width: 100%;
+
+        padding: 0 15px;
+
+        box-sizing: border-box;
+    }
+
+    img {
+        max-width: 100%;
+        height: auto;
+    }
+
+
+    /* YouTubeなど */
+
+    iframe {
+        max-width: 100%;
+
+        width: 100%;
+
+        height: auto;
+
+        aspect-ratio: 16 / 9;
+    }
+
+
+    /* HOME */
+
+    .hero {
+        padding: 60px 20px;
+    }
+
+    .hero img {
+        width: 100%;
+
+        max-width: 450px;
+    }
+
+    .hero h1 {
+        font-size: 30px;
+    }
+
+    .hero h2 {
+        font-size: 32px;
+    }
+
+    .hero p {
+        font-size: 16px;
+
+        line-height: 1.8;
+    }
+
+    .hero-button {
+        padding: 12px 30px;
+
+        font-size: 16px;
+    }
+
+
+    /* STORY */
+
+    .story {
+        padding: 60px 20px;
+    }
+
+    .story h2 {
+        font-size: 32px;
+    }
+
+    .story-box {
+        padding: 35px 25px;
+    }
+
+    .story p {
+        font-size: 15px;
+
+        line-height: 2;
+    }
+
+
+    /* CHARACTER */
+
+    .character {
+        padding: 60px 10px;
+    }
+
+    .character h2 {
+        font-size: 32px;
+    }
+
+    .section-subtitle {
+        font-size: 16px;
+    }
+
+
+    /* キャラクター一覧 */
+
+    .character-slider {
+        gap: 8px;
+    }
+
+    .character-list {
+        gap: 15px;
+
+        padding: 15px 5px;
+    }
+
+
+    /* キャラクターカード */
+
+    .character-card {
+        flex: 0 0 260px;
+
+        padding: 20px;
+    }
+
+    .character-image {
+        height: 240px;
+    }
+
+    .character-card h3 {
+        font-size: 22px;
+
+        margin: 20px 0 8px;
+    }
+
+    .character-card p {
+        font-size: 14px;
+
+        line-height: 1.7;
+    }
+
+
+    /* 矢印 */
+
+    .character-arrow {
+        width: 42px;
+        height: 42px;
+
+        flex: 0 0 42px;
 
         font-size: 32px;
 
+        line-height: 42px;
     }
 
+
+    /* CHARACTER LIST PAGE */
+
+    .character-page {
+        padding: 70px 20px 80px;
+    }
+
+    .character-page-title {
+        margin-bottom: 35px;
+    }
+
+    .character-page-title h1 {
+        font-size: 32px;
+    }
 
     .character-grid {
-
-        grid-template-columns:
-            repeat(2, 1fr);
+        grid-template-columns: repeat(2, 1fr);
 
         gap: 15px;
-
     }
 
-
     .character-page-card {
-
         height: 260px;
 
         border-radius: 22px;
-
     }
-
 
     .character-page-image {
-
         height: 200px;
-
     }
-
 
     .character-page-name {
-
         height: 70px;
 
-        padding:
-            5px 5px;
-
+        padding: 5px;
     }
 
-
     .character-page-name h3 {
-
         margin-top: 10px;
 
         font-size: 16px;
-
     }
-
 
     .character-page-name p {
-
         font-size: 10px;
-
     }
 
-}
 
+    /* CHARACTER DETAIL */
 
+    .character-detail {
+        padding: 60px 20px;
+    }
 
+    .character-detail h1 {
+        font-size: 32px;
 
-/* =========================================
-キャラクター個人ページ
-画像＋プロフィール横並び
-========================================= */
+        margin-bottom: 30px;
+    }
 
-.character-detail-box {
-    display: flex;
-    align-items: center;
-    gap: 60px;
+    .character-detail-content {
+        flex-direction: column;
 
-    max-width: 1100px;
-    margin: 0 auto;
+        gap: 30px;
 
-    padding: 40px;
-
-    box-sizing: border-box;
-
-    background: rgba(255, 255, 255, 0.9);
-
-    border-radius: 35px;
-
-    box-shadow:
-        0 10px 35px rgba(150, 180, 220, 0.2);
-}
-
-
-/* 左側：画像 */
-
-.character-detail-box .character-detail-image {
-    flex: 0 0 45%;
-    max-width: 450px;
-
-    background: white;
-
-    border-radius: 30px;
-
-    overflow: hidden;
-
-    box-shadow:
-        0 10px 30px rgba(150, 180, 220, 0.2);
-}
-
-.character-detail-box .character-detail-image img {
-    display: block;
-
-    width: 100%;
-    height: auto;
-}
-
-
-/* 右側：プロフィール */
-
-.character-detail-info {
-    flex: 1;
-
-    text-align: left;
-}
-
-
-/* 英字名前 */
-
-.character-detail-name-en {
-    margin: 0 0 8px;
-
-    color: #72cfe8;
-
-    font-size: 14px;
-    font-weight: bold;
-
-    letter-spacing: 3px;
-}
-
-
-/* 名前 */
-
-.character-detail-info h2 {
-    margin: 0 0 20px;
-
-    color: #e88abb;
-
-    font-size: 32px;
-}
-
-
-/* 紹介文 */
-
-.character-detail-catch {
-    margin: 0 0 30px;
-
-    color: #555;
-
-    font-size: 17px;
-
-    line-height: 1.9;
-}
-
-
-/* プロフィール */
-
-.character-profile {
-    border-top: 2px solid #f4d8e8;
-}
-
-.profile-row {
-    display: flex;
-
-    padding: 12px 0;
-
-    border-bottom: 1px solid #eeeeee;
-}
-
-.profile-row span {
-    flex: 0 0 100px;
-
-    color: #72cfe8;
-
-    font-weight: bold;
-}
-
-.profile-row p {
-    margin: 0;
-
-    color: #555;
-}
-
-
-/* =========================================
-スマホでは縦並び
-========================================= */
-
-@media (max-width: 768px) {
+        text-align: left;
+    }
 
     .character-detail-box {
         flex-direction: column;
@@ -2681,14 +2135,373 @@ body.roman-glitch-active {
         padding: 25px 20px;
     }
 
+    .character-detail-image,
     .character-detail-box .character-detail-image {
         width: 100%;
+
         max-width: 450px;
+
         flex: none;
     }
 
+    .character-detail-text,
     .character-detail-info {
         width: 100%;
     }
 
+    .character-detail-text h2,
+    .character-detail-info h2 {
+        font-size: 27px;
+    }
+
+    .character-detail-text p {
+        font-size: 15px;
+
+        line-height: 1.9;
+    }
+
+    .character-detail-text dl {
+        margin-top: 25px;
+    }
+
+    .back-button {
+        margin-top: 40px;
+    }
+
+
+    /* NEWS */
+
+    .news {
+        padding: 60px 20px;
+    }
+
+    .news h2,
+    .news > h2 {
+        font-size: 30px;
+    }
+
+    .news-list {
+        padding: 5px 20px;
+    }
+
+    .news-item {
+        flex-direction: column;
+
+        gap: 8px;
+
+        padding: 25px 5px;
+    }
+
+    .news-item time {
+        flex: none;
+    }
+
+
+    /* NEWS詳細 */
+
+    .news-detail {
+        padding: 60px 20px;
+    }
+
+    .news-detail h1 {
+        font-size: 27px;
+    }
+
+    .news-detail-box {
+        padding: 30px 20px;
+    }
+
+    .news-detail-box p {
+        font-size: 15px;
+    }
+
+
+    /* NEWS専用ページ */
+
+    .news-page {
+        padding: 60px 15px;
+    }
+
+    .news-page > h1 {
+        font-size: 32px;
+    }
+
+    .news-page-list {
+        padding: 5px 20px;
+    }
+
+    .news-page-item {
+        flex-direction: column;
+
+        gap: 8px;
+
+        padding: 25px 5px;
+    }
+
+    .news-page-item time {
+        flex: none;
+    }
+
+    .news-page-content h2 {
+        font-size: 18px;
+    }
+
+    .news-page-content p {
+        font-size: 14px;
+    }
+
+
+    /* NEWSページ切り替え */
+
+    .news-pagination {
+        gap: 18px;
+
+        margin-top: 25px;
+    }
+
+    .news-page-button {
+        width: 40px;
+        height: 40px;
+
+        font-size: 28px;
+
+        line-height: 40px;
+    }
+
+    #newsPageNumber {
+        font-size: 14px;
+    }
+
+
+    /* MOVIE */
+
+    .movie-section {
+        width: 95%;
+
+        margin: 60px auto;
+    }
+
+    .movie-section h1 {
+        font-size: 32px;
+    }
+
+    .movie-item h2 {
+        font-size: 21px;
+    }
+
+    .movie-caption {
+        font-size: 14px;
+    }
+
+
+    /* フッター */
+
+    footer {
+        margin-top: 50px;
+
+        padding: 25px 15px;
+
+        font-size: 13px;
+    }
+}
+
+
+/* =========================================
+   さらに小さいスマホ
+========================================= */
+
+@media (max-width: 480px) {
+
+    /* ヘッダー */
+
+    header {
+        padding: 12px 10px;
+    }
+
+    .logo {
+        font-size: 18px;
+    }
+
+    nav {
+        gap: 7px;
+    }
+
+    nav a {
+        font-size: 11px;
+    }
+
+
+    /* HOME */
+
+    .hero {
+        padding: 40px 15px;
+    }
+
+    .hero h1 {
+        font-size: 26px;
+    }
+
+    .hero h2 {
+        font-size: 28px;
+    }
+
+    .hero p {
+        font-size: 14px;
+    }
+
+
+    /* CHARACTER */
+
+    .character {
+        padding: 50px 5px;
+    }
+
+    .character h2 {
+        font-size: 28px;
+    }
+
+    .character-slider {
+        gap: 5px;
+    }
+
+    .character-list {
+        gap: 12px;
+
+        padding: 10px 3px;
+    }
+
+    .character-card {
+        flex: 0 0 240px;
+
+        padding: 15px;
+    }
+
+    .character-image {
+        height: 220px;
+    }
+
+    .character-card h3 {
+        font-size: 20px;
+    }
+
+    .character-card p {
+        font-size: 13px;
+    }
+
+
+    /* 矢印 */
+
+    .character-arrow {
+        width: 36px;
+        height: 36px;
+
+        flex: 0 0 36px;
+
+        font-size: 28px;
+
+        line-height: 36px;
+    }
+
+
+    /* CHARACTER LIST */
+
+    .character-page {
+        padding: 50px 12px 60px;
+    }
+
+    .character-grid {
+        gap: 10px;
+    }
+
+    .character-page-card {
+        height: 220px;
+
+        border-radius: 18px;
+    }
+
+    .character-page-image {
+        height: 165px;
+    }
+
+    .character-page-name {
+        height: 60px;
+    }
+
+    .character-page-name h3 {
+        font-size: 14px;
+    }
+
+    .character-page-name p {
+        font-size: 9px;
+    }
+
+
+    /* 個人ページ */
+
+    .character-detail {
+        padding: 45px 15px;
+    }
+
+    .character-detail h1 {
+        font-size: 28px;
+    }
+
+    .character-detail-text h2,
+    .character-detail-info h2 {
+        font-size: 24px;
+    }
+
+
+    /* NEWS */
+
+    .news {
+        padding: 50px 15px;
+    }
+
+    .news-list {
+        padding: 5px 15px;
+    }
+
+    .news-item {
+        padding: 20px 5px;
+    }
+
+
+    /* NEWS詳細 */
+
+    .news-detail {
+        padding: 45px 15px;
+    }
+
+    .news-detail-box {
+        padding: 25px 18px;
+    }
+
+
+    /* NEWS専用ページ */
+
+    .news-page {
+        padding: 45px 10px;
+    }
+
+    .news-page > h1 {
+        font-size: 28px;
+    }
+
+    .news-page-list {
+        padding: 5px 15px;
+    }
+
+
+    /* MOVIE */
+
+    .movie-section {
+        width: 95%;
+
+        margin: 50px auto;
+    }
+
+    .movie-section h1 {
+        font-size: 28px;
+    }
 }
