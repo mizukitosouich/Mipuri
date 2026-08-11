@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+
+<html lang="ja">
+
+<head>
+
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+<title>夜沙暗ろまん | みぃのアイプリ</title>
+
+<link rel="stylesheet" href="style.css">
+
+
+</head>
+
+<body>
+
+<header>
+
+
+<div class="logo">
+    みぃのアイプリ
+</div>
+
+<nav>
+
+    <a href="index.html">HOME</a>
+    <a href="index.html#story">STORY</a>
+    <a href="index.html#character">CHARACTER</a>
+    <a href="index.html#news">NEWS</a>
+
+</nav>
+
+
+</header>
+
+<section class="character-detail">
+
+
+<p class="section-subtitle">
+    ― CHARACTER ―
+</p>
+
+
+<h1 id="roman-name" class="roman-glitch-name">
+    夜沙暗ろまん
+</h1>
+
+
+
+<div class="character-detail-content">
+
+
+    <div class="character-detail-image">
+
+        <img
+            id="roman-image"
+            src="images/roma.jpg"
+            alt="夜沙暗ろまん">
+
+    </div>
+
+
+
+    <div class="character-detail-text">
+
+        <h2 id="roman-name-sub" class="roman-glitch-name">
+            夜沙暗ろまん
+        </h2>
+
+        <p>
+            穏やかな性格の中学二年生の女の子。<br>
+            ふと気が付くといなくなってることがあるみたいなんだけど…………？<br>
+            先輩のゆあちゃんと一緒にデュオ、デバック⇔リバースとして活動中♪
+        </p>
+
+
+
+        <dl>
+
+            <dt>名前</dt>
+            <dd>夜沙暗ろまん</dd>
+
+            <dt>年齢</dt>
+            <dd>14歳（season2）</dd>
+
+            <dt>好きなもの</dt>
+            <dd>???</dd>
+
+            <dt>誕生日</dt>
+            <dd>10月18日</dd>
+
+        </dl>
+
+    </div>
+
+</div>
+
+
+
+<a
+    href="character.html"
+    class="back-button"
+    id="character-back-button">
+
+    CHARACTERに戻る
+
+</a>
+
+
+</section>
+
+<footer>
+
+
+<p>
+    © 2026 みぃのアイプリ
+</p>
+
+
+</footer>
+
+<script src="script.js"></script>
+
+<div id="tv-noise"></div>
+
+<script>
+
+const romanNames =
+    document.querySelectorAll(".roman-glitch-name");
+
+const romanImage =
+    document.getElementById("roman-image");
+
+const tvNoise =
+    document.getElementById("tv-noise");
+
+
+romanNames.forEach(name => {
+
+    name.addEventListener("click", () => {
+
+        /* ノイズ開始 */
+
+        tvNoise.classList.remove("active");
+
+        document.body.classList.remove(
+            "roman-screen-glitch"
+        );
+
+        romanImage.classList.remove(
+            "roman-image-glitch"
+        );
+
+
+        /* アニメーションを再起動 */
+
+        void tvNoise.offsetWidth;
+
+        void document.body.offsetWidth;
+
+        void romanImage.offsetWidth;
+
+
+        tvNoise.classList.add("active");
+
+        document.body.classList.add(
+            "roman-screen-glitch"
+        );
+
+        romanImage.classList.add(
+            "roman-image-glitch"
+        );
+
+
+        /* 画像を一時的に変更 */
+
+        setTimeout(() => {
+
+            romanImage.src =
+                "images/roma-secret.jpg";
+
+        }, 180);
+
+
+        /* 約0.5秒後に元へ戻す */
+
+        setTimeout(() => {
+
+            romanImage.src =
+                "images/roma.jpg";
+
+        }, 500);
+
+    });
+
+});
+
+</script>
+
+</body>
+
+</html>
