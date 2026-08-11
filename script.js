@@ -280,46 +280,72 @@ document.addEventListener("DOMContentLoaded", function () {
 
 });
 
-/* =========================
-   夜沙暗ろまん 名前クリック演出
-========================= */
 
 document.addEventListener("DOMContentLoaded", function () {
 
-    const romanName = document.getElementById("roman-name");
-    const tvNoise = document.getElementById("tv-noise");
-    const romanImage = document.getElementById("roman-image");
+    const romanNames =
+        document.querySelectorAll(".roman-glitch-name");
+
+    const tvNoise =
+        document.getElementById("tv-noise");
+
+    const romanImage =
+        document.getElementById("roman-image");
+
+    const secretProfile =
+        document.getElementById("roman-secret-profile");
+
 
     // ろまんのページではない場合は何もしない
-    if (!romanName || !tvNoise) {
+    if (
+        romanNames.length === 0 ||
+        !tvNoise
+    ) {
         return;
     }
 
-    romanName.addEventListener("click", function () {
 
-        // 連打防止
-        if (tvNoise.classList.contains("active")) {
-            return;
-        }
+    // クリック回数
+    let romanClickCount = 0;
 
-        /* ノイズ開始 */
-        tvNoise.classList.add("active");
+    // クリック判定用タイマー
+    let romanClickTimer = null;
 
-        /* 画面をガタつかせる */
-        document.body.classList.add(
-            "roman-glitch-active"
-        );
 
-        /* ろまんの画像もバグらせる */
-        if (romanImage) {
-            romanImage.classList.add(
-                "roman-image-glitch"
-            );
-        }
+    // ろまんの名前
+    romanNames.forEach(function (romanName) {
 
-        /* 0.6秒後に全部元に戻す */
-        setTimeout(function () {
+        romanName.addEventListener("click", function () {
 
+
+            /* =========================
+               クリック回数を増やす
+            ========================= */
+
+            romanClickCount++;
+
+
+            /* =========================
+               2秒以内に3回
+               2秒経ったらリセット
+            ========================= */
+
+            clearTimeout(romanClickTimer);
+
+            romanClickTimer = setTimeout(function () {
+
+                romanClickCount = 0;
+
+            }, 2000);
+
+
+            /* =========================
+               振動・ノイズ演出
+               1回目でも2回目でも3回目でも発生
+            ========================= */
+
+
+            // いったんリセット
             tvNoise.classList.remove("active");
 
             document.body.classList.remove(
@@ -327,41 +353,112 @@ document.addEventListener("DOMContentLoaded", function () {
             );
 
             if (romanImage) {
+
                 romanImage.classList.remove(
                     "roman-image-glitch"
                 );
+
             }
 
-        }, 600);
 
-    });
+            // アニメーション再起動
+            void tvNoise.offsetWidth;
 
-});
+            void document.body.offsetWidth;
 
-// =========================
-// CHARACTER詳細ページへ移動する前に
-// 現在のページ番号を保存
-// =========================
 
-const characterCards =
-    document.querySelectorAll(".character-page-card");
+            if (romanImage) {
 
-characterCards.forEach(function(card) {
+                void romanImage.offsetWidth;
 
-    card.addEventListener("click", function() {
+            }
 
-        const currentPage =
-            document.getElementById("characterPageNumber")
-            ?.textContent;
 
-        if (currentPage) {
+            // ノイズ開始
+            tvNoise.classList.add("active");
 
-            localStorage.setItem(
-                "characterReturnPage",
-                currentPage
+
+            // 画面をガタつかせる
+            document.body.classList.add(
+                "roman-glitch-active"
             );
 
-        }
+
+            // 画像もバグらせる
+            if (romanImage) {
+
+                romanImage.classList.add(
+                    "roman-image-glitch"
+                );
+
+            }
+
+
+            /* =========================
+               3回目だった場合
+            ========================= */
+
+            if (romanClickCount >= 3) {
+
+                // カウントをリセット
+                romanClickCount = 0;
+
+                clearTimeout(romanClickTimer);
+
+
+                /* =====================
+                   隠しプロフィール表示
+                ===================== */
+
+                if (secretProfile) {
+
+                    setTimeout(function () {
+
+                        secretProfile.classList.add(
+                            "show"
+                        );
+
+
+                        // 隠しプロフィールまでスクロール
+                        secretProfile.scrollIntoView({
+
+                            behavior: "smooth",
+
+                            block: "center"
+
+                        });
+
+                    }, 650);
+
+                }
+
+            }
+
+
+            /* =========================
+               0.6秒後に演出終了
+            ========================= */
+
+            setTimeout(function () {
+
+                tvNoise.classList.remove("active");
+
+                document.body.classList.remove(
+                    "roman-glitch-active"
+                );
+
+
+                if (romanImage) {
+
+                    romanImage.classList.remove(
+                        "roman-image-glitch"
+                    );
+
+                }
+
+            }, 600);
+
+        });
 
     });
 
