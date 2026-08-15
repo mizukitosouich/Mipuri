@@ -3215,3 +3215,925 @@ body.roman-glitch-active {
     }
 
 }
+
+
+/* =====================================
+   SPECIAL
+===================================== */
+
+.special-section {
+
+    padding: 100px 20px;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+
+/* 説明文 */
+
+.special-intro {
+
+    margin: 20px 0 50px;
+
+    color: #777;
+
+    line-height: 2;
+
+    font-size: 15px;
+
+}
+
+
+/* カード一覧 */
+
+.special-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+
+}
+
+
+/* カード */
+
+.special-card {
+
+    position: relative;
+
+    display: flex;
+
+    flex-direction: column;
+
+    min-height: 280px;
+
+    padding: 35px 30px;
+
+    box-sizing: border-box;
+
+    text-decoration: none;
+
+    color: #333;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.98),
+            rgba(245,250,255,0.98)
+        );
+
+    border-radius: 30px;
+
+    border: 2px solid
+        rgba(255,160,210,0.45);
+
+    box-shadow:
+
+        0 10px 30px
+        rgba(100,150,200,0.12);
+
+    overflow: hidden;
+
+    transition:
+
+        transform 0.35s ease,
+
+        box-shadow 0.35s ease,
+
+        border-color 0.35s ease;
+
+}
+
+
+/* キラキラ背景 */
+
+.special-card::before {
+
+    content: "✦";
+
+    position: absolute;
+
+    top: 15px;
+
+    right: 25px;
+
+    font-size: 28px;
+
+    color: #ff9ed2;
+
+    opacity: 0.7;
+
+}
+
+
+/* ホバー */
+
+.special-card:hover {
+
+    transform:
+        translateY(-8px);
+
+    border-color:
+        #ff9ed2;
+
+    box-shadow:
+
+        0 18px 40px
+        rgba(255,140,200,0.25);
+
+}
+
+
+/* アイコン */
+
+.special-card-icon {
+
+    width: 75px;
+
+    height: 75px;
+
+    margin: 0 auto 20px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #ffd9ed,
+            #ccefff
+        );
+
+    font-size: 34px;
+
+    box-shadow:
+
+        0 5px 15px
+        rgba(150,180,220,0.2);
+
+}
+
+
+/* カード内容 */
+
+.special-card-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    align-items: center;
+
+    flex: 1;
+
+}
+
+
+/* カテゴリー */
+
+.special-category {
+
+    margin-bottom: 8px;
+
+    color: #78bcd0;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* タイトル */
+
+.special-card h3 {
+
+    margin: 5px 0 12px;
+
+    color: #444;
+
+    font-size: 21px;
+
+}
+
+
+/* 説明 */
+
+.special-card p {
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+/* VIEW MORE */
+
+.special-more {
+
+    margin-top: auto;
+
+    padding-top: 20px;
+
+    color: #e487b6;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =====================================
+   スクロール登場
+===================================== */
+
+.special-section.scroll-fade {
+
+    opacity: 0;
+
+    transform:
+        translateY(40px);
+
+    transition:
+
+        opacity 0.8s ease,
+
+        transform 0.8s ease;
+
+}
+
+
+.special-section.scroll-fade.show {
+
+    opacity: 1;
+
+    transform:
+        translateY(0);
+
+}
+
+
+/* =====================================
+   スマホ
+===================================== */
+
+@media (max-width: 768px) {
+
+    .special-section {
+
+        padding:
+            70px 15px;
+
+    }
+
+
+    .special-grid {
+
+        grid-template-columns:
+            1fr;
+
+        gap: 20px;
+
+    }
+
+
+    .special-card {
+
+        min-height: 250px;
+
+        padding:
+            30px 25px;
+
+    }
+
+
+    .special-card h3 {
+
+        font-size: 19px;
+
+    }
+
+}
+
+/* =====================================
+   SPECIAL PAGE
+===================================== */
+
+.special-page {
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding:
+        100px 20px;
+
+    text-align: center;
+
+}
+
+
+.special-page h1 {
+
+    margin:
+        10px 0 20px;
+
+    font-size: 38px;
+
+}
+
+
+.special-page-intro {
+
+    margin-bottom: 50px;
+
+    color: #777;
+
+    line-height: 2;
+
+}
+
+
+/* =====================================
+   SPECIAL VIDEO
+===================================== */
+
+.special-video-box {
+
+    position: relative;
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background: #111;
+
+    box-shadow:
+
+        0 15px 40px
+        rgba(0,0,0,0.2);
+
+}
+
+
+.special-video-box iframe {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+}
+
+
+/* 動画タイトル */
+
+.special-movie-title {
+
+    margin:
+        35px 0 10px;
+
+    font-size: 25px;
+
+}
+
+
+.special-movie-description {
+
+    color: #777;
+
+    line-height: 1.8;
+
+    margin-bottom: 35px;
+
+}
+
+
+/* =====================================
+   スマホ
+===================================== */
+
+@media (max-width: 768px) {
+
+    .special-page {
+
+        padding:
+            70px 15px;
+
+    }
+
+
+    .special-page h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    .special-video-box {
+
+        border-radius: 15px;
+
+    }
+
+}
+
+/* =====================================
+   MUSIC PAGE
+===================================== */
+
+.music-page {
+
+    max-width: 1000px;
+
+    margin: 0 auto;
+
+    padding:
+        100px 20px;
+
+    text-align: center;
+
+}
+
+
+/* 説明 */
+
+.music-intro {
+
+    margin:
+        20px 0 60px;
+
+    color: #777;
+
+    line-height: 2;
+
+}
+
+
+/* =====================================
+   MUSIC ITEM
+===================================== */
+
+.music-item {
+
+    position: relative;
+
+    margin:
+        0 auto 60px;
+
+    padding:
+        40px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.98),
+            rgba(245,250,255,0.98)
+        );
+
+    border-radius: 30px;
+
+    border:
+        2px solid
+        rgba(255,160,210,0.4);
+
+    box-shadow:
+        0 12px 35px
+        rgba(100,150,200,0.12);
+
+}
+
+
+/* MUSIC番号 */
+
+.music-number {
+
+    margin-bottom: 10px;
+
+    color: #78bcd0;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* 曲名 */
+
+.music-item h2 {
+
+    margin:
+        5px 0 8px;
+
+    color: #444;
+
+    font-size: 28px;
+
+}
+
+
+/* アーティスト */
+
+.music-artist {
+
+    margin:
+        0 0 30px;
+
+    color: #e487b6;
+
+    font-size: 15px;
+
+    font-weight: bold;
+
+}
+
+
+/* =====================================
+   MUSIC VIDEO
+===================================== */
+
+.music-video {
+
+    position: relative;
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    border-radius: 20px;
+
+    background: #111;
+
+}
+
+
+.music-video iframe {
+
+    width: 100%;
+
+    height: 100%;
+
+    border: none;
+
+}
+
+
+/* =====================================
+   COMING SOON
+===================================== */
+
+.music-placeholder {
+
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 20px;
+
+    box-sizing: border-box;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #e9f8ff,
+            #ffe8f4
+        );
+
+    border:
+        2px dashed
+        rgba(180,180,200,0.6);
+
+}
+
+
+.music-placeholder span {
+
+    color: #8aa5b0;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* =====================================
+   SECRET MUSIC
+===================================== */
+
+.secret-music {
+
+    background:
+
+        linear-gradient(
+            135deg,
+            #17151d,
+            #292330
+        );
+
+    border:
+        1px solid
+        rgba(255,150,210,0.5);
+
+}
+
+
+.secret-music span {
+
+    color: #ff9dce;
+
+    text-shadow:
+        0 0 10px
+        rgba(255,150,210,0.7);
+
+    animation:
+        musicSecretBlink
+        1.5s infinite;
+
+}
+
+
+@keyframes musicSecretBlink {
+
+    0%,
+    100% {
+
+        opacity: 1;
+
+    }
+
+    50% {
+
+        opacity: 0.35;
+
+    }
+
+}
+
+
+/* =====================================
+   曲説明
+===================================== */
+
+.music-description {
+
+    margin:
+        25px auto 0;
+
+    max-width: 700px;
+
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 2;
+
+}
+
+
+/* =====================================
+   ホバー演出
+===================================== */
+
+.music-item {
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.music-item:hover {
+
+    transform:
+        translateY(-5px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(255,140,200,0.2);
+
+}
+
+
+/* =====================================
+   スマホ
+===================================== */
+
+@media (max-width: 768px) {
+
+    .music-page {
+
+        padding:
+            70px 15px;
+
+    }
+
+
+    .music-item {
+
+        padding:
+            25px 20px;
+
+        margin-bottom:
+            40px;
+
+        border-radius:
+            22px;
+
+    }
+
+
+    .music-item h2 {
+
+        font-size:
+            23px;
+
+    }
+
+
+    .music-video,
+    .music-placeholder {
+
+        border-radius:
+            15px;
+
+    }
+
+
+    .music-description {
+
+        font-size:
+            13px;
+
+    }
+
+}
+
+
+
+
+
+
+/* =====================================
+   MUSIC
+===================================== */
+
+.music-list {
+    width: 90%;
+    max-width: 1100px;
+    margin: 50px auto 0;
+
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 35px;
+}
+
+
+.music-card {
+    background: linear-gradient(
+        135deg,
+        rgba(255, 255, 255, 0.95),
+        rgba(235, 250, 255, 0.95)
+    );
+
+    border-radius: 25px;
+
+    padding: 25px;
+
+    box-shadow:
+        0 10px 25px rgba(120, 180, 220, 0.18);
+
+    border: 2px solid rgba(255, 255, 255, 0.9);
+
+    transition: 0.3s;
+}
+
+
+.music-card:hover {
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 30px rgba(120, 180, 220, 0.3);
+}
+
+
+.music-card-content {
+    text-align: center;
+}
+
+
+.music-card h3 {
+    font-size: 26px;
+
+    margin: 10px 0;
+
+    color: #555;
+}
+
+
+.music-card p {
+    margin-bottom: 20px;
+
+    color: #777;
+
+    font-size: 15px;
+}
+
+
+.music-video {
+    width: 100%;
+
+    aspect-ratio: 16 / 9;
+
+    overflow: hidden;
+
+    border-radius: 18px;
+}
+
+
+.music-video iframe {
+    width: 100%;
+    height: 100%;
+
+    border: none;
+}
+
+
+
+/* =====================================
+   スマホ
+===================================== */
+
+@media (max-width: 700px) {
+
+    .music-list {
+        width: 90%;
+
+        grid-template-columns: 1fr;
+
+        gap: 25px;
+    }
+
+
+    .music-card {
+        padding: 18px;
+    }
+
+
+    .music-card h3 {
+        font-size: 22px;
+    }
+
+}
