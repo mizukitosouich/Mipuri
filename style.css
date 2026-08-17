@@ -4141,34 +4141,25 @@ body.roman-glitch-active {
 
 /* =====================================
    COORDINATE
-   衣装ギャラリー
 ===================================== */
 
-
-/* 全体 */
-
 .coordinate-section {
-
     padding: 100px 20px;
-
     text-align: center;
-
 }
 
 
 /* 説明文 */
 
 .coordinate-intro {
-
     margin-top: 20px;
-
     line-height: 2;
-
+    color: #777;
 }
 
 
 /* =====================================
-   2キャラを横並び
+   キャラクターを2人ずつ横並び
 ===================================== */
 
 .coordinate-character-row {
@@ -4180,21 +4171,9 @@ body.roman-glitch-active {
     gap: 60px;
 
     width: 100%;
-
     max-width: 1100px;
 
     margin: 70px auto 0;
-
-}
-
-
-/* =====================================
-   キャラクター
-===================================== */
-
-.coordinate-character {
-
-    width: 100%;
 
 }
 
@@ -4208,7 +4187,6 @@ body.roman-glitch-active {
     display: flex;
 
     justify-content: center;
-
     align-items: center;
 
     gap: 10px;
@@ -4228,13 +4206,11 @@ body.roman-glitch-active {
 
     font-size: 16px;
 
-    color: #e487b6;
-
 }
 
 
 /* =====================================
-   衣装2枚を横並び
+   衣装2枚
 ===================================== */
 
 .coordinate-grid {
@@ -4271,8 +4247,6 @@ body.roman-glitch-active {
 }
 
 
-/* ホバー */
-
 .coordinate-card:hover {
 
     transform: translateY(-5px);
@@ -4302,20 +4276,17 @@ body.roman-glitch-active {
 .coordinate-image img {
 
     width: 100%;
-
     height: 100%;
 
-    display: block;
-
     object-fit: cover;
+
+    display: block;
 
     transition:
         transform 0.4s ease;
 
 }
 
-
-/* 画像ホバー */
 
 .coordinate-card:hover
 .coordinate-image img {
@@ -4326,7 +4297,7 @@ body.roman-glitch-active {
 
 
 /* =====================================
-   衣装カード文字
+   衣装名
 ===================================== */
 
 .coordinate-content {
@@ -4350,24 +4321,10 @@ body.roman-glitch-active {
 
 
 /* =====================================
-   最後の1キャラ
-===================================== */
-
-.coordinate-character-row.single-character {
-
-    grid-template-columns: 1fr;
-
-    max-width: 530px;
-
-}
-
-
-/* =====================================
    スマホ
 ===================================== */
 
 @media (max-width: 700px) {
-
 
     .coordinate-section {
 
@@ -4376,7 +4333,7 @@ body.roman-glitch-active {
     }
 
 
-    /* 1キャラずつ縦 */
+    /* スマホでは1キャラずつ */
 
     .coordinate-character-row {
 
@@ -4389,17 +4346,6 @@ body.roman-glitch-active {
     }
 
 
-    /* 最後の1キャラ */
-
-    .coordinate-character-row.single-character {
-
-        grid-template-columns: 1fr;
-
-    }
-
-
-    /* キャラクター名 */
-
     .coordinate-character-title {
 
         font-size: 21px;
@@ -4407,16 +4353,12 @@ body.roman-glitch-active {
     }
 
 
-    /* 衣装 */
-
     .coordinate-grid {
 
         gap: 10px;
 
     }
 
-
-    /* カード */
 
     .coordinate-content {
 
@@ -4432,3 +4374,1376 @@ body.roman-glitch-active {
     }
 
 }
+
+
+
+/* =====================================
+   COORDINATE IMAGE VIEWER
+===================================== */
+
+.coordinate-image img {
+    cursor: pointer;
+}
+
+
+/* モーダル */
+
+.coordinate-modal {
+    display: none;
+
+    position: fixed;
+
+    inset: 0;
+
+    z-index: 9999;
+}
+
+
+/* 表示時 */
+
+.coordinate-modal.active {
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+}
+
+
+/* 背景 */
+
+.coordinate-modal-bg {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(0, 0, 0, 0.75);
+
+}
+
+
+/* 拡大画像エリア */
+
+.coordinate-image-viewer {
+
+    position: relative;
+
+    z-index: 2;
+
+    max-width: 90vw;
+    max-height: 90vh;
+
+}
+
+
+/* 拡大画像 */
+
+.coordinate-image-viewer img {
+
+    display: block;
+
+    max-width: 90vw;
+    max-height: 90vh;
+
+    width: auto;
+    height: auto;
+
+    object-fit: contain;
+
+}
+
+
+/* 閉じるボタン */
+
+.coordinate-close {
+
+    position: absolute;
+
+    top: -45px;
+    right: 0;
+
+    width: 40px;
+    height: 40px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: white;
+
+    color: #555;
+
+    font-size: 28px;
+
+    line-height: 40px;
+
+    cursor: pointer;
+
+}
+
+
+/* スマホ */
+
+@media (max-width: 600px) {
+
+    .coordinate-image-viewer img {
+
+        max-width: 90vw;
+        max-height: 80vh;
+
+    }
+
+    .coordinate-close {
+
+        top: -45px;
+        right: 0;
+
+    }
+
+}
+
+/* =====================================
+   INTERVIEW
+===================================== */
+
+.interview-section {
+
+    padding: 100px 20px;
+
+    text-align: center;
+
+}
+
+
+/* =====================================
+   説明文
+===================================== */
+
+.interview-intro {
+
+    margin-top: 20px;
+
+    color: #777;
+
+    line-height: 2;
+
+}
+
+
+/* =====================================
+   インタビュー一覧
+===================================== */
+
+.interview-list {
+
+    width: 90%;
+
+    max-width: 900px;
+
+    margin: 60px auto 0;
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 45px;
+
+}
+
+
+/* =====================================
+   インタビュ―カード
+===================================== */
+
+.interview-card {
+
+    position: relative;
+
+    padding: 35px;
+
+    text-align: left;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.98),
+            rgba(238,250,255,0.98)
+        );
+
+    border-radius: 30px;
+
+    border:
+        2px solid
+        rgba(255,255,255,0.95);
+
+    box-shadow:
+        0 12px 30px
+        rgba(130,180,220,0.18);
+
+    overflow: hidden;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+/* キラキラ */
+
+.interview-card::before {
+
+    content: "✦";
+
+    position: absolute;
+
+    top: 18px;
+
+    right: 25px;
+
+    color: #ffb9dc;
+
+    font-size: 22px;
+
+}
+
+
+.interview-card::after {
+
+    content: "✧";
+
+    position: absolute;
+
+    bottom: 20px;
+
+    right: 40px;
+
+    color: #a8e4f5;
+
+    font-size: 18px;
+
+}
+
+
+.interview-card:hover {
+
+    transform:
+        translateY(-6px);
+
+    box-shadow:
+        0 18px 40px
+        rgba(130,180,220,0.27);
+
+}
+
+
+/* =====================================
+   カードヘッダー
+===================================== */
+
+.interview-card-header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    margin-bottom: 25px;
+
+}
+
+
+.interview-number {
+
+    color: #9ab4c0;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+}
+
+
+.interview-sparkle {
+
+    color: #ffb7d9;
+
+    font-size: 13px;
+
+    letter-spacing: 5px;
+
+}
+
+
+/* =====================================
+   キャラクター部分
+===================================== */
+
+.interview-character {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    margin-bottom: 30px;
+
+}
+
+
+/* キャラクター画像 */
+
+.interview-image {
+
+    flex-shrink: 0;
+
+    width: 150px;
+
+    height: 150px;
+
+    overflow: hidden;
+
+    border-radius: 50%;
+
+    border:
+        5px solid
+        white;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe0ee,
+            #dff7ff
+        );
+
+    box-shadow:
+        0 7px 20px
+        rgba(130,180,220,0.2);
+
+}
+
+
+.interview-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+    display: block;
+
+}
+
+
+/* =====================================
+   キャラクター情報
+===================================== */
+
+.interview-info {
+
+    flex: 1;
+
+}
+
+
+.interview-category {
+
+    color: #9db9c6;
+
+    font-size: 11px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+}
+
+
+.interview-info h3 {
+
+    margin: 7px 0 10px;
+
+    color: #555;
+
+    font-size: 27px;
+
+}
+
+
+.interview-info p {
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: 13px;
+
+    line-height: 1.8;
+
+}
+
+
+/* =====================================
+   質問・回答
+===================================== */
+
+.interview-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 15px;
+
+}
+
+
+/* 質問 */
+
+.interview-question,
+.interview-answer {
+
+    display: flex;
+
+    align-items: flex-start;
+
+    gap: 15px;
+
+    padding: 18px 20px;
+
+    border-radius: 18px;
+
+}
+
+
+/* Q */
+
+.interview-question {
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff0f7,
+            #fff8fb
+        );
+
+}
+
+
+/* A */
+
+.interview-answer {
+
+    background:
+        linear-gradient(
+            135deg,
+            #ebfaff,
+            #f8fdff
+        );
+
+}
+
+
+/* Q / A */
+
+.question-mark,
+.answer-mark {
+
+    flex-shrink: 0;
+
+    width: 32px;
+
+    height: 32px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    border-radius: 50%;
+
+    font-weight: bold;
+
+    font-size: 13px;
+
+}
+
+
+/* Q */
+
+.question-mark {
+
+    background: #ffd1e6;
+
+    color: #d76d9d;
+
+}
+
+
+/* A */
+
+.answer-mark {
+
+    background: #cceff9;
+
+    color: #5c9caf;
+
+}
+
+
+/* 文章 */
+
+.interview-question p,
+.interview-answer p {
+
+    margin: 4px 0 0;
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+}
+
+
+/* =====================================
+   戻るボタン
+===================================== */
+
+.interview-back {
+
+    display: inline-block;
+
+    margin-top: 60px;
+
+    padding: 14px 35px;
+
+    border-radius: 30px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffdcec,
+            #dff7ff
+        );
+
+    color: #687f89;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    text-decoration: none;
+
+    box-shadow:
+        0 7px 18px
+        rgba(150,190,220,0.2);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.interview-back:hover {
+
+    transform:
+        translateY(-3px);
+
+    box-shadow:
+        0 10px 25px
+        rgba(150,190,220,0.3);
+
+}
+
+
+/* =====================================
+   スマホ
+===================================== */
+
+@media (max-width: 700px) {
+
+    .interview-section {
+
+        padding:
+            70px 15px;
+
+    }
+
+
+    .interview-list {
+
+        width: 95%;
+
+        margin-top: 45px;
+
+        gap: 30px;
+
+    }
+
+
+    .interview-card {
+
+        padding: 23px;
+
+        border-radius: 24px;
+
+    }
+
+
+    .interview-character {
+
+        gap: 18px;
+
+    }
+
+
+    .interview-image {
+
+        width: 100px;
+
+        height: 100px;
+
+    }
+
+
+    .interview-info h3 {
+
+        font-size: 21px;
+
+    }
+
+
+    .interview-info p {
+
+        font-size: 12px;
+
+    }
+
+
+    .interview-question,
+    .interview-answer {
+
+        padding: 14px;
+
+        gap: 10px;
+
+    }
+
+
+    .interview-question p,
+    .interview-answer p {
+
+        font-size: 12px;
+
+        line-height: 1.8;
+
+    }
+
+}
+
+/* =====================================
+   INTERVIEW
+===================================== */
+
+.interview-section {
+
+    padding: 100px 20px;
+
+    text-align: center;
+
+}
+
+
+/* 説明 */
+
+.interview-intro {
+
+    margin-top: 20px;
+
+    color: #777;
+
+    line-height: 2;
+
+}
+
+
+/* =====================================
+   インタビューカード
+===================================== */
+
+.interview-card {
+
+    display: flex;
+
+    align-items: stretch;
+
+    gap: 35px;
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 60px auto;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    text-align: left;
+
+    background:
+
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.98),
+            rgba(235,250,255,0.98)
+        );
+
+    border-radius: 30px;
+
+    border: 2px solid rgba(255,255,255,0.9);
+
+    box-shadow:
+
+        0 10px 30px
+        rgba(120,180,220,0.18);
+
+    transition:
+
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+/* ホバー */
+
+.interview-card:hover {
+
+    transform: translateY(-6px);
+
+    box-shadow:
+
+        0 18px 40px
+        rgba(255,150,210,0.22);
+
+}
+
+
+/* =====================================
+   キャラクター画像
+===================================== */
+
+.interview-character {
+
+    width: 280px;
+
+    min-width: 280px;
+
+}
+
+
+.interview-character img {
+
+    width: 100%;
+
+    height: 380px;
+
+    object-fit: cover;
+
+    display: block;
+
+    border-radius: 25px;
+
+    box-shadow:
+
+        0 6px 18px
+        rgba(120,180,220,0.2);
+
+}
+
+
+/* =====================================
+   インタビュー本文
+===================================== */
+
+.interview-content {
+
+    flex: 1;
+
+    min-width: 0;
+
+}
+
+
+/* キャラクター名 */
+
+.interview-name {
+
+    display: flex;
+
+    justify-content: flex-start;
+
+    align-items: center;
+
+    gap: 12px;
+
+    margin-bottom: 25px;
+
+    color: #ff8fc5;
+
+}
+
+
+.interview-name > span {
+
+    font-size: 18px;
+
+}
+
+
+.interview-category {
+
+    display: block;
+
+    margin-bottom: 3px;
+
+    color: #8ab9c9;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+}
+
+
+.interview-name h3 {
+
+    margin: 0;
+
+    color: #555;
+
+    font-size: 27px;
+
+}
+
+
+/* =====================================
+   質問
+===================================== */
+
+.interview-question {
+
+    margin-bottom: 20px;
+
+    padding: 17px 20px;
+
+    background:
+
+        rgba(255,255,255,0.8);
+
+    border-radius: 18px;
+
+    border-left:
+
+        4px solid #ffacd3;
+
+}
+
+
+.question-number {
+
+    display: inline-block;
+
+    margin-bottom: 5px;
+
+    color: #ff8fc5;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+.interview-question h4 {
+
+    margin: 3px 0 8px;
+
+    color: #555;
+
+    font-size: 16px;
+
+}
+
+
+.interview-question p {
+
+    margin: 0;
+
+    color: #777;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+}
+
+
+/* =====================================
+   スマホ
+===================================== */
+
+@media (max-width: 700px) {
+
+    .interview-section {
+
+        padding: 70px 15px;
+
+    }
+
+
+    .interview-card {
+
+        flex-direction: column;
+
+        gap: 25px;
+
+        margin: 45px auto;
+
+        padding: 20px;
+
+        border-radius: 25px;
+
+    }
+
+
+    .interview-character {
+
+        width: 100%;
+
+        min-width: 0;
+
+    }
+
+
+    .interview-character img {
+
+        width: 100%;
+
+        height: 330px;
+
+        object-fit: cover;
+
+        border-radius: 20px;
+
+    }
+
+
+    .interview-name {
+
+        justify-content: center;
+
+    }
+
+
+    .interview-name h3 {
+
+        font-size: 23px;
+
+        text-align: center;
+
+    }
+
+
+    .interview-category {
+
+        text-align: center;
+
+    }
+
+
+    .interview-question {
+
+        padding: 15px;
+
+    }
+
+
+    .interview-question h4 {
+
+        font-size: 15px;
+
+    }
+
+
+    .interview-question p {
+
+        font-size: 13px;
+
+    }
+
+}
+
+
+/* =====================================
+   INTERVIEW
+===================================== */
+
+.interview-section {
+
+    padding: 100px 20px;
+
+    max-width: 1100px;
+
+    margin: 0 auto;
+
+    text-align: center;
+
+}
+
+
+.interview-section h1 {
+
+    margin: 10px 0 20px;
+
+    color: #555;
+
+    font-size: 34px;
+
+}
+
+
+.interview-intro {
+
+    margin-bottom: 70px;
+
+    color: #777;
+
+    line-height: 2;
+
+    font-size: 15px;
+
+}
+
+
+/* =====================================
+   インタビューカード
+===================================== */
+
+.interview-card {
+
+    width: 100%;
+
+    margin: 0 auto 70px;
+
+    padding: 30px;
+
+    box-sizing: border-box;
+
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255,255,255,0.98),
+            rgba(235,250,255,0.98)
+        );
+
+    border-radius: 30px;
+
+    border:
+        2px solid
+        rgba(255,255,255,0.9);
+
+    box-shadow:
+        0 10px 30px
+        rgba(120,180,220,0.18);
+
+    text-align: left;
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.interview-card:hover {
+
+    transform: translateY(-5px);
+
+    box-shadow:
+        0 15px 35px
+        rgba(255,150,200,0.22);
+
+}
+
+
+/* =====================================
+   キャラクター部分
+===================================== */
+
+.interview-character {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 30px;
+
+    padding-bottom: 25px;
+
+    margin-bottom: 25px;
+
+    border-bottom:
+        2px dashed
+        rgba(220,180,210,0.5);
+
+}
+
+
+.interview-character img {
+
+    width: 180px;
+
+    height: 220px;
+
+    object-fit: cover;
+
+    border-radius: 25px;
+
+    flex-shrink: 0;
+
+    box-shadow:
+        0 8px 20px
+        rgba(120,180,220,0.2);
+
+}
+
+
+.interview-character h2 {
+
+    margin: 8px 0;
+
+    font-size: 28px;
+
+    color: #555;
+
+}
+
+
+.interview-character p {
+
+    margin: 0;
+
+    color: #888;
+
+    line-height: 1.8;
+
+}
+
+
+/* =====================================
+   カテゴリー
+===================================== */
+
+.interview-category {
+
+    display: inline-block;
+
+    color: #ff8fbd;
+
+    font-size: 12px;
+
+    font-weight: bold;
+
+    letter-spacing: 2px;
+
+}
+
+
+/* =====================================
+   質問
+===================================== */
+
+.interview-questions {
+
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 18px;
+
+}
+
+
+.interview-question {
+
+    padding: 20px 22px;
+
+    background:
+        rgba(255,255,255,0.8);
+
+    border-radius: 20px;
+
+    border:
+        1px solid
+        rgba(210,225,235,0.8);
+
+}
+
+
+.interview-question h3 {
+
+    margin: 0 0 10px;
+
+    color: #e783ad;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+}
+
+
+.interview-question p {
+
+    margin: 0;
+
+    color: #666;
+
+    font-size: 14px;
+
+    line-height: 1.9;
+
+}
+
+
+/* =====================================
+   スマホ
+===================================== */
+
+@media (max-width: 700px) {
+
+    .interview-section {
+
+        padding:
+            70px 15px;
+
+    }
+
+
+    .interview-section h1 {
+
+        font-size: 27px;
+
+    }
+
+
+    .interview-intro {
+
+        margin-bottom: 45px;
+
+        font-size: 13px;
+
+    }
+
+
+    .interview-card {
+
+        padding: 20px;
+
+        margin-bottom: 45px;
+
+        border-radius: 24px;
+
+    }
+
+
+    /* ここがスマホ画像崩れ対策 */
+
+    .interview-character {
+
+        display: flex;
+
+        flex-direction: column;
+
+        align-items: center;
+
+        text-align: center;
+
+        gap: 18px;
+
+    }
+
+
+    .interview-character img {
+
+        width: 100%;
+
+        max-width: 260px;
+
+        height: auto;
+
+        aspect-ratio: 3 / 4;
+
+        object-fit: cover;
+
+        border-radius: 22px;
+
+    }
+
+
+    .interview-character h2 {
+
+        font-size: 24px;
+
+    }
+
+
+    .interview-character p {
+
+        font-size: 13px;
+
+    }
+
+
+    .interview-question {
+
+        padding: 17px;
+
+        border-radius: 17px;
+
+    }
+
+
+    .interview-question h3 {
+
+        font-size: 14px;
+
+    }
+
+
+    .interview-question p {
+
+        font-size: 13px;
+
+        line-height: 1.8;
+
+    }
+
+}
+
+

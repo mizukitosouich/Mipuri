@@ -1,0 +1,2716 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+        content="width=device-width, initial-scale=1.0">
+
+    <title>INTERVIEW｜みぃのアイプリTVアニメ公式サイト</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <style>
+
+/* =====================================
+   INTERVIEW PAGE
+===================================== */
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+/* =====================================
+   ページ全体
+===================================== */
+
+.interview-page {
+
+    padding: 100px 20px;
+
+    background:
+        linear-gradient(
+            180deg,
+            #fff8fc 0%,
+            #f5fcff 50%,
+            #fff8fc 100%
+        );
+
+}
+
+
+/* =====================================
+   タイトル
+===================================== */
+
+.interview-page-title {
+
+    text-align: center;
+
+    margin-bottom: 60px;
+
+}
+
+
+.interview-page-title p {
+
+    margin: 0 0 10px;
+
+    color: #9bbdca;
+
+    font-size: 14px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+}
+
+
+.interview-page-title h1 {
+
+    margin: 0;
+
+    color: #555;
+
+    font-size: 36px;
+
+}
+
+
+.interview-page-title span {
+
+    display: block;
+
+    width: 80px;
+
+    height: 4px;
+
+    margin: 20px auto 0;
+
+    border-radius: 10px;
+
+    background:
+        linear-gradient(
+            90deg,
+            #ffb6d9,
+            #aee7f5
+        );
+
+}
+
+
+/* =====================================
+   説明
+===================================== */
+
+.interview-intro {
+
+    text-align: center;
+
+    color: #777;
+
+    line-height: 2;
+
+    margin-bottom: 50px;
+
+}
+
+
+/* =====================================
+   SEASON NAV
+===================================== */
+
+.interview-season-nav {
+
+    width: 100%;
+
+    max-width: 1000px;
+
+    margin: 0 auto 70px;
+
+    display: flex;
+
+    justify-content: center;
+
+    flex-wrap: wrap;
+
+    gap: 12px;
+
+}
+
+
+.interview-season-nav a {
+
+    display: inline-block;
+
+    padding: 12px 24px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    color: #777;
+
+    font-weight: bold;
+
+    font-size: 14px;
+
+    background: white;
+
+    border: 2px solid rgba(255, 190, 220, 0.5);
+
+    box-shadow:
+        0 5px 15px
+        rgba(150, 190, 210, 0.12);
+
+    transition: 0.3s;
+
+}
+
+
+.interview-season-nav a:hover {
+
+    transform: translateY(-3px);
+
+    color: #ff75b7;
+
+    border-color: #ffb6d9;
+
+    box-shadow:
+        0 8px 20px
+        rgba(255, 150, 200, 0.2);
+
+}
+
+
+/* =====================================
+   SEASON
+===================================== */
+
+.interview-season {
+
+    width: 100%;
+
+    max-width: 1100px;
+
+    margin: 0 auto 100px;
+
+    scroll-margin-top: 100px;
+
+}
+
+
+.interview-season-title {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+.interview-season-title span {
+
+    display: block;
+
+    color: #9dbbc5;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+}
+
+
+.interview-season-title h2 {
+
+    margin: 8px 0 0;
+
+    color: #555;
+
+    font-size: 28px;
+
+}
+
+
+/* =====================================
+   キャラクター選択
+===================================== */
+
+.interview-character-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(4, 1fr);
+
+    gap: 20px;
+
+}
+
+
+/* =====================================
+   キャラクターカード
+===================================== */
+
+.interview-character-card {
+
+    display: block;
+
+    text-decoration: none;
+
+    color: inherit;
+
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 12px;
+
+    box-shadow:
+        0 8px 25px
+        rgba(120, 180, 220, 0.15);
+
+    border:
+        2px solid
+        rgba(255, 255, 255, 0.9);
+
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
+
+}
+
+
+.interview-character-card:hover {
+
+    transform: translateY(-7px);
+
+    box-shadow:
+        0 15px 30px
+        rgba(255, 150, 200, 0.25);
+
+}
+
+
+/* =====================================
+   キャラクター画像
+===================================== */
+
+.interview-character-image {
+
+    width: 100%;
+
+    aspect-ratio: 3 / 4;
+
+    overflow: hidden;
+
+    border-radius: 16px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe8f4,
+            #e7f9ff
+        );
+
+}
+
+
+.interview-character-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+/* =====================================
+   キャラクター名
+===================================== */
+
+.interview-character-card h3 {
+
+    margin: 12px 5px 5px;
+
+    text-align: center;
+
+    font-size: 16px;
+
+    color: #555;
+
+}
+
+
+.interview-character-card p {
+
+    margin: 0 5px 8px;
+
+    text-align: center;
+
+    color: #aaa;
+
+    font-size: 11px;
+
+    letter-spacing: 1px;
+
+}
+
+
+/* =====================================
+   インタビュー
+===================================== */
+
+.interview-detail {
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 0 auto 90px;
+
+    padding: 45px;
+
+    box-sizing: border-box;
+
+    background: white;
+
+    border-radius: 30px;
+
+    box-shadow:
+        0 12px 35px
+        rgba(120, 180, 220, 0.15);
+
+    border:
+        2px solid
+        rgba(255, 210, 230, 0.5);
+
+    scroll-margin-top: 80px;
+
+}
+
+
+/* =====================================
+   インタビュータイトル
+===================================== */
+
+.interview-detail-header {
+
+    text-align: center;
+
+    margin-bottom: 35px;
+
+}
+
+
+.interview-detail-header span {
+
+    color: #ff9dca;
+
+    font-size: 13px;
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+}
+
+
+.interview-detail-header h2 {
+
+    margin: 8px 0;
+
+    color: #555;
+
+    font-size: 30px;
+
+}
+
+
+/* =====================================
+   インタビュー画像
+===================================== */
+
+.interview-detail-image {
+
+    width: 280px;
+
+    height: 350px;
+
+    margin: 0 auto 40px;
+
+    overflow: hidden;
+
+    border-radius: 25px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #ffe8f4,
+            #e4f9ff
+        );
+
+    box-shadow:
+        0 10px 25px
+        rgba(120, 180, 220, 0.2);
+
+}
+
+
+.interview-detail-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    display: block;
+
+    object-fit: cover;
+
+}
+
+
+/* =====================================
+   質問
+===================================== */
+
+.interview-question {
+
+    margin-bottom: 25px;
+
+    padding: 25px 28px;
+
+    border-radius: 20px;
+
+    background:
+        linear-gradient(
+            135deg,
+            #fff8fc,
+            #f2fbff
+        );
+
+    border-left:
+        5px solid
+        #ffb6d9;
+
+}
+
+
+.interview-question h3 {
+
+    margin: 0 0 12px;
+
+    color: #666;
+
+    font-size: 17px;
+
+    line-height: 1.6;
+
+}
+
+
+.interview-question p {
+
+    margin: 0;
+
+    color: #777;
+
+    line-height: 2;
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================
+   一覧へ戻る
+===================================== */
+
+.interview-back {
+
+    display: block;
+
+    width: fit-content;
+
+    margin: 20px auto 0;
+
+    padding: 10px 24px;
+
+    border-radius: 30px;
+
+    text-decoration: none;
+
+    color: #888;
+
+    background: #f8fbfc;
+
+    border: 1px solid #dcebef;
+
+    font-size: 13px;
+
+    transition: 0.3s;
+
+}
+
+
+.interview-back:hover {
+
+    color: #ff75b7;
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =====================================
+   ？？？カード
+===================================== */
+
+.interview-mystery {
+
+    background:
+        linear-gradient(
+            135deg,
+            #27232d,
+            #3b3040
+        );
+
+}
+
+
+.interview-mystery h3,
+.interview-mystery p {
+
+    color: #fff;
+
+}
+
+
+.interview-mystery .interview-character-image {
+
+    background:
+        radial-gradient(
+            circle,
+            #70546d,
+            #24202a
+        );
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+}
+
+
+.interview-mystery-mark {
+
+    font-size: 55px;
+
+    color: #ffb7dc;
+
+    text-shadow:
+        0 0 20px
+        rgba(255, 170, 220, 0.8);
+
+}
+
+
+/* =====================================
+   スマホ
+===================================== */
+
+@media (max-width: 768px) {
+
+    .interview-page {
+
+        padding: 70px 15px;
+
+    }
+
+
+    .interview-page-title h1 {
+
+        font-size: 28px;
+
+    }
+
+
+    .interview-intro {
+
+        font-size: 13px;
+
+    }
+
+
+    .interview-season-nav {
+
+        gap: 8px;
+
+        margin-bottom: 50px;
+
+    }
+
+
+    .interview-season-nav a {
+
+        padding: 9px 15px;
+
+        font-size: 12px;
+
+    }
+
+
+    .interview-season {
+
+        margin-bottom: 70px;
+
+    }
+
+
+    .interview-season-title h2 {
+
+        font-size: 24px;
+
+    }
+
+
+    .interview-character-grid {
+
+        grid-template-columns:
+            repeat(2, 1fr);
+
+        gap: 14px;
+
+    }
+
+
+    .interview-character-card {
+
+        padding: 8px;
+
+        border-radius: 17px;
+
+    }
+
+
+    .interview-character-image {
+
+        aspect-ratio: 3 / 4;
+
+        border-radius: 12px;
+
+    }
+
+
+    .interview-character-card h3 {
+
+        font-size: 14px;
+
+        margin-top: 9px;
+
+    }
+
+
+    .interview-character-card p {
+
+        font-size: 9px;
+
+    }
+
+
+    .interview-detail {
+
+        padding: 25px 16px;
+
+        border-radius: 22px;
+
+        margin-bottom: 60px;
+
+    }
+
+
+    .interview-detail-header h2 {
+
+        font-size: 24px;
+
+    }
+
+
+    .interview-detail-image {
+
+        width: min(75vw, 260px);
+
+        height: auto;
+
+        aspect-ratio: 3 / 4;
+
+        margin-bottom: 30px;
+
+    }
+
+
+    .interview-question {
+
+        padding: 18px;
+
+        border-radius: 16px;
+
+    }
+
+
+    .interview-question h3 {
+
+        font-size: 14px;
+
+    }
+
+
+    .interview-question p {
+
+        font-size: 13px;
+
+        line-height: 1.9;
+
+    }
+
+}
+
+
+@media (max-width: 400px) {
+
+    .interview-character-grid {
+
+        gap: 10px;
+
+    }
+
+
+    .interview-character-card h3 {
+
+        font-size: 13px;
+
+    }
+
+}
+
+    </style>
+
+</head>
+
+
+<body>
+
+
+<!-- =====================================
+     ヘッダー
+===================================== -->
+
+<header>
+
+    <div class="logo">
+
+        <a href="index.html">
+
+            <img
+                src="images/title.png"
+                alt="みぃのアイプリ">
+
+        </a>
+
+    </div>
+
+
+    <nav>
+
+        <a href="index.html">HOME</a>
+
+        <a href="index.html#story">STORY</a>
+
+        <a href="character.html">CHARACTER</a>
+
+        <a href="news.html">NEWS</a>
+
+        <a href="index.html#movie">MOVIE</a>
+
+        <a href="special.html">SPECIAL</a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =====================================
+     INTERVIEW
+===================================== -->
+
+<main>
+
+<section class="interview-page">
+
+
+    <!-- タイトル -->
+
+    <div class="interview-page-title">
+
+        <p>― SPECIAL INTERVIEW ―</p>
+
+        <h1>キャラクターインタビュー</h1>
+
+        <span></span>
+
+    </div>
+
+
+    <p class="interview-intro">
+
+        アイプリたちに聞いてみました♪<br>
+        気になるキャラクターを選んで、インタビューを読んでみよう！
+
+    </p>
+
+
+
+    <!-- =====================================
+         SEASON NAV
+    ====================================== -->
+
+    <div class="interview-season-nav">
+
+        <a href="#season1">
+            SEASON 1
+        </a>
+
+        <a href="#season2">
+            SEASON 2
+        </a>
+
+        <a href="#season3">
+            SEASON 3
+        </a>
+
+        <a href="#season4">
+            SEASON 4
+        </a>
+
+    </div>
+
+
+
+<!-- =====================================
+     SEASON 1
+===================================== -->
+
+<section
+    id="season1"
+    class="interview-season">
+
+
+    <div class="interview-season-title">
+
+        <span>SEASON 1</span>
+
+        <h2>はじまりのアイプリたち</h2>
+
+    </div>
+
+
+    <div class="interview-character-grid">
+
+
+        <a href="#interview-mii"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/mi.jpg"
+                    alt="春野みぃ">
+
+            </div>
+
+            <h3>春野みぃ</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+        <a href="#interview-sagiri"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/sagiri.jpg"
+                    alt="冬原さぎり">
+
+            </div>
+
+            <h3>冬原さぎり</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+        <a href="#interview-rii"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/rii.jpg"
+                    alt="一ノ瀬りぃ">
+
+            </div>
+
+            <h3>一ノ瀬りぃ</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+        <a href="#interview-sui"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/sui.jpg"
+                    alt="水森翠">
+
+            </div>
+
+            <h3>水森翠</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+        <a href="#interview-paku"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/paku.jpg"
+                    alt="由良樹ぱく">
+
+            </div>
+
+            <h3>由良樹ぱく</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+        <a href="#interview-izu"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/izu.jpg"
+                    alt="秋風いずき">
+
+            </div>
+
+            <h3>秋風いずき</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     SEASON 2
+===================================== -->
+
+<section
+    id="season2"
+    class="interview-season">
+
+
+    <div class="interview-season-title">
+
+        <span>SEASON 2</span>
+
+        <h2>広がるアイプリバース</h2>
+
+    </div>
+
+
+    <div class="interview-character-grid">
+
+
+        <a href="#interview-nagi"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/nagi.jpg"
+                    alt="夕暮凪">
+
+            </div>
+
+            <h3>夕暮凪</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+        <a href="#interview-kurumi"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/kurumi.jpg"
+                    alt="黒瀬胡桃">
+
+            </div>
+
+            <h3>黒瀬胡桃</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+        <a href="#interview-rei"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/rei.jpg"
+                    alt="水森零">
+
+            </div>
+
+            <h3>水森零</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+        <a href="#interview-natu"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/natu.webp"
+                    alt="神咲夏色">
+
+            </div>
+
+            <h3>神咲夏色</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+        <a href="#interview-ami"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/ami.jpg"
+                    alt="柏木亜美華">
+
+            </div>
+
+            <h3>柏木亜美華</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+        <a href="#interview-yua"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/yua.jpg"
+                    alt="星宵ゆあ">
+
+            </div>
+
+            <h3>星宵ゆあ</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+        <a href="#interview-roma"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/roma.jpg"
+                    alt="夜沙暗ろまん">
+
+            </div>
+
+            <h3>夜沙暗ろまん</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+        <a href="#interview-ria"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/ria.jpg"
+                    alt="雪野リア">
+
+            </div>
+
+            <h3>雪野リア</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+        <a href="#interview-mystery"
+           class="interview-character-card interview-mystery">
+
+            <div class="interview-character-image">
+
+                <span class="interview-mystery-mark">
+                    ???
+                </span>
+
+            </div>
+
+            <h3>？？？</h3>
+
+            <p>SECRET INTERVIEW</p>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     SEASON 3
+===================================== -->
+
+<section
+    id="season3"
+    class="interview-season">
+
+
+    <div class="interview-season-title">
+
+        <span>SEASON 3</span>
+
+        <h2>新たな出会い</h2>
+
+    </div>
+
+
+    <div class="interview-character-grid">
+
+
+        <a href="#interview-lilith"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/lilith.jpg"
+                    alt="リリス=ブライト">
+
+            </div>
+
+            <h3>リリス=ブライト</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+        <a href="#interview-luna"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/luna.jpg"
+                    alt="ルナ=ブライト">
+
+            </div>
+
+            <h3>ルナ=ブライト</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+        <a href="#interview-nemu"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/nemu.webp"
+                    alt="一夜ねむ">
+
+            </div>
+
+            <h3>一夜ねむ</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+        <a href="#interview-haruto"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/haruto.webp"
+                    alt="朝倉ハルト">
+
+            </div>
+
+            <h3>朝倉ハルト</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+        <a href="#interview-alice"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/Alice.jpg"
+                    alt="瀬那アリス">
+
+            </div>
+
+            <h3>瀬那アリス</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+        <a href="#interview-yuika"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/yuika.jpg"
+                    alt="星宵ゆいか">
+
+            </div>
+
+            <h3>星宵ゆいか</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     SEASON 4
+===================================== -->
+
+<section
+    id="season4"
+    class="interview-season">
+
+
+    <div class="interview-season-title">
+
+        <span>SEASON 4</span>
+
+        <h2>新しい物語へ</h2>
+
+    </div>
+
+
+    <div class="interview-character-grid">
+
+
+        <a href="#interview-paru"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/paru.jpg"
+                    alt="虹風ぱる">
+
+            </div>
+
+            <h3>虹風ぱる</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+        <a href="#interview-mimi"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/mimi.jpg"
+                    alt="曇日みみ">
+
+            </div>
+
+            <h3>曇日みみ</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+        <a href="#interview-shizuku"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/sizuku.jpg"
+                    alt="水森雫">
+
+            </div>
+
+            <h3>水森雫</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+        <a href="#interview-amane"
+           class="interview-character-card">
+
+            <div class="interview-character-image">
+
+                <img
+                    src="images/amane.jpg"
+                    alt="春野あまね">
+
+            </div>
+
+            <h3>春野あまね</h3>
+
+            <p>INTERVIEW</p>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =====================================
+     INTERVIEW DETAILS
+===================================== -->
+
+
+
+<!-- 春野みぃ -->
+
+<section id="interview-mii"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+
+        <span>SEASON 1 / INTERVIEW</span>
+
+        <h2>春野みぃ</h2>
+
+    </div>
+
+    <div class="interview-detail-image">
+
+        <img src="images/mi.jpg"
+             alt="春野みぃ">
+
+    </div>
+
+    <div class="interview-question">
+
+        <h3>Q1. アイプリになろうと思ったきっかけは？</h3>
+
+        <p>
+            いずきちゃんに勧められたから…………かなぁ？
+            でも今はもっともっとみんなに笑顔を届けたいって思ってるよ♪
+        </p>
+
+    </div>
+
+    <div class="interview-question">
+
+        <h3>Q2. 最近何かおいしいもの食べた？</h3>
+
+        <p>
+            翠ちゃんの作った特製アフタヌーンティー！
+            びっくりするくらい豪華でびっくりしちゃった♪
+        </p>
+
+    </div>
+
+    <div class="interview-question">
+
+        <h3>Q3. これから叶えたい夢は？</h3>
+
+        <p>
+            いちばんかわいいおひめさまになること！
+            それから…………魔法使いさんにありがとうって言いたいな
+        </p>
+
+    </div>
+
+    <a href="#season1" class="interview-back">
+        ↑ SEASON 1へ戻る
+    </a>
+
+</section>
+
+
+
+<!-- 冬原さぎり -->
+
+<section id="interview-sagiri"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+
+        <span>SEASON 1 / INTERVIEW</span>
+
+        <h2>冬原さぎり</h2>
+
+    </div>
+
+    <div class="interview-detail-image">
+
+        <img src="images/sagiri.jpg"
+             alt="冬原さぎり">
+
+    </div>
+
+    <div class="interview-question">
+
+        <h3>Q1. みぃちゃんのどんなところが好き？</h3>
+
+        <p>
+            ぜんぶ！！！！！それ以外の言葉いらない！！！！！
+        </p>
+
+    </div>
+
+    <div class="interview-question">
+
+        <h3>Q2. 最近のとっておきみぃちゃんの話をぜひ…………！</h3>
+
+        <p>
+          あ、この前みぃちゃんが四葉のクローバー見つけてたんだけど
+          押し花みたいにしててすっごくかわいかった！
+        </p>
+
+    </div>
+
+    <div class="interview-question">
+
+        <h3>Q3. 最近のお気に入りの飲み物は？</h3>
+
+        <p>
+            炭酸ジュース！！スカッとしてすっごく好き！！！
+        </p>
+
+    </div>
+
+    <a href="#season1" class="interview-back">
+        ↑ SEASON 1へ戻る
+    </a>
+
+</section>
+
+
+
+<!-- 一ノ瀬りぃ -->
+
+<section id="interview-rii"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+
+        <span>SEASON 1 / INTERVIEW</span>
+
+        <h2>一ノ瀬りぃ</h2>
+
+    </div>
+
+    <div class="interview-detail-image">
+
+        <img src="images/rii.jpg"
+             alt="一ノ瀬りぃ">
+
+    </div>
+
+    <div class="interview-question">
+
+        <h3>Q1. ステージで一番大切にしていることは？</h3>
+
+        <p>
+            見ている人に夢を見せることよ。
+            私のライブを見た人が「明日も頑張ろう」と思ってくれたら嬉しいわね。
+        </p>
+
+    </div>
+
+    <div class="interview-question">
+
+        <h3>Q2. 後輩アイプリに伝えたいことは？</h3>
+
+        <p>
+            自分だけの輝きを大切にしてほしいわ。
+            誰かと同じになる必要なんてないもの。
+            ファンの笑顔を大切にすることも忘れずにね。
+        </p>
+
+    </div>
+
+    <div class="interview-question">
+
+        <h3>Q3. これから挑戦したいことは？</h3>
+
+        <p>
+            そうね…………バンジージャンプとかいいんじゃないかしら。
+            挑戦的なことを企画でやっても楽しいかもしれないわね。
+        </p>
+
+    </div>
+
+    <a href="#season1" class="interview-back">
+        ↑ SEASON 1へ戻る
+    </a>
+
+</section>
+
+
+
+<!-- 水森翠 -->
+
+<section id="interview-sui"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+
+        <span>SEASON 1 / INTERVIEW</span>
+
+        <h2>水森翠</h2>
+
+    </div>
+
+    <div class="interview-detail-image">
+
+        <img src="images/sui.jpg"
+             alt="水森翠">
+
+    </div>
+
+    <div class="interview-question">
+
+        <h3>Q1. アイプリの好きなところは？</h3>
+
+        <p>
+            みんなが自由にキラキラできるところかなぁ～♪
+            ステージに立つと、いつも新しい発見があるんだよ。
+        </p>
+
+    </div>
+
+    <div class="interview-question">
+
+        <h3>Q2. ライブ前にすることは？</h3>
+
+        <p>
+            ハーブティーを飲むことかなぁ
+            気が付いたらみんな集まっててみんなでティーパーティーするの♪
+        </p>
+
+    </div>
+
+    <div class="interview-question">
+
+        <h3>Q3. 最近何か買った？</h3>
+
+        <p>
+           最近はお菓子作り用に計量スプーンと
+           はかりを新調したの～♪
+        </p>
+
+    </div>
+
+    <a href="#season1" class="interview-back">
+        ↑ SEASON 1へ戻る
+    </a>
+
+</section>
+
+
+
+<!-- 由良樹ぱく -->
+
+<section id="interview-paku"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+
+        <span>SEASON 1 / INTERVIEW</span>
+
+        <h2>由良樹ぱく</h2>
+
+    </div>
+
+    <div class="interview-detail-image">
+
+        <img src="images/paku.jpg"
+             alt="由良樹ぱく">
+
+    </div>
+
+    <div class="interview-question">
+
+        <h3>Q1. ライブの魅力って何？</h3>
+
+        <p>
+            やっぱりみんなで盛り上がれることっす！
+            ステージと客席がひとつになる瞬間が最高なんすよ！
+        </p>
+
+    </div>
+
+    <div class="interview-question">
+
+        <h3>Q2. 胡桃ちゃんについて教えて！</h3>
+
+        <p>
+            胡桃センパイは大事な親友っすね！
+            ちょっと変わってるところもあるっすけど、そこも含めて最高の友達っすよ！
+        </p>
+
+    </div>
+
+    <div class="interview-question">
+
+        <h3>Q3. 黒瀬家で次どんなことがしたい？</h3>
+
+        <p>
+            んー、自分で考えるよりも先に
+            センパイのことっすからなんかまたとんでもないこと言いだしそうっすね。
+        </p>
+
+    </div>
+
+    <a href="#season1" class="interview-back">
+        ↑ SEASON 1へ戻る
+    </a>
+
+</section>
+
+
+
+<!-- 秋風いずき -->
+
+<section id="interview-izu"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+
+        <span>SEASON 1 / INTERVIEW</span>
+
+        <h2>秋風いずき</h2>
+
+    </div>
+
+    <div class="interview-detail-image">
+
+        <img src="images/izu.jpg"
+             alt="秋風いずき">
+
+    </div>
+
+    <div class="interview-question">
+
+        <h3>Q1. みぃちゃんにアイプリになってほしい理由は？</h3>
+
+        <p>
+            みぃちゃんには、絶対にアイプリの才能があると思ったから！
+            …………想像以上だったけど
+        </p>
+
+    </div>
+
+    <div class="interview-question">
+
+        <h3>Q2. 最近気になることは？</h3>
+
+        <p>
+            えーっと…………最近なんか不思議なエラーコードが頻発してて…………
+            確か…………CODE439…………？
+        </p>
+
+    </div>
+
+    <div class="interview-question">
+
+        <h3>Q3. これからの夢は？</h3>
+
+        <p>
+            裏方として、最高のステージを作るお手伝いをすること
+            かな
+        </p>
+
+    </div>
+
+    <a href="#season1" class="interview-back">
+        ↑ SEASON 1へ戻る
+    </a>
+
+</section>
+
+
+
+<!-- =====================================
+     SEASON 2 INTERVIEW
+===================================== -->
+
+
+<!-- 夕暮凪 -->
+
+<section id="interview-nagi"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+        <span>SEASON 2 / INTERVIEW</span>
+        <h2>夕暮凪</h2>
+    </div>
+
+    <div class="interview-detail-image">
+        <img src="images/nagi.jpg" alt="夕暮凪">
+    </div>
+
+    <div class="interview-question">
+        <h3>Q1. ステージで妥協しない理由は？</h3>
+        <p>
+            見てくれる人がいる以上、中途半端なものは見せたくないから。<br>
+            自分が納得できるステージを作りたいにきまってるでしょ。
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q2. 仲間に求めるものは？</h3>
+        <p>
+            尊敬しあえて高めあえる関係。
+            それ以外ないわ。
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q3. 神咲夏色さんとはどのような関係ですか？</h3>
+        <p>
+           あの子はね…………友人の置き土産みたいなものなのよね…………
+           <br>まぁ、気にかけているとは言っておくわ
+        </p>
+    </div>
+
+    <a href="#season2" class="interview-back">↑ SEASON 2へ戻る</a>
+
+</section>
+
+
+
+<!-- 黒瀬胡桃 -->
+
+<section id="interview-kurumi"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+        <span>SEASON 2 / INTERVIEW</span>
+        <h2>黒瀬胡桃</h2>
+    </div>
+
+    <div class="interview-detail-image">
+        <img src="images/kurumi.jpg" alt="黒瀬胡桃">
+    </div>
+
+    <div class="interview-question">
+        <h3>Q1. ぱくの好きなところは？</h3>
+        <p>
+            いつも元気で、どんなときでも前を向いているところなのです！
+            私にとって、とっても大切な親友なのです！
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q2. 最近連絡した相手は？</h3>
+        <p>
+            ぱく…………って言いたいのですが実は柏木さんなのです。<br>
+            お花の相談をしたのですよ♪
+
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q3. これからやってみたいことは？</h3>
+        <p>
+           ユニクロに行ってみたいのです！！
+           ぱくが好きって言ってたのです♪
+        </p>
+    </div>
+
+    <a href="#season2" class="interview-back">↑ SEASON 2へ戻る</a>
+
+</section>
+
+
+
+<!-- 水森零 -->
+
+<section id="interview-rei"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+        <span>SEASON 2 / INTERVIEW</span>
+        <h2>水森零</h2>
+    </div>
+
+    <div class="interview-detail-image">
+        <img src="images/rei.jpg" alt="水森零">
+    </div>
+
+    <div class="interview-question">
+        <h3>Q1. 翠に伝えたいことは？</h3>
+        <p>
+            無理をしないで、自分らしくいてくれたらそれでいいかな。
+            翠が笑っていることが、私にとって一番嬉しいから。
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q2. ステージに立つときに意識していることは？</h3>
+        <p>
+            自分の気持ちをきちんと届けること。
+            それから、翠を支えて歌うことかな。
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q3. 最近何かやったことはある？</h3>
+        <p>
+            珍しくゲームしたよ。最近はパズルゲームやってる。
+        </p>
+    </div>
+
+    <a href="#season2" class="interview-back">↑ SEASON 2へ戻る</a>
+
+</section>
+
+
+
+<!-- 神咲夏色 -->
+
+<section id="interview-natu"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+        <span>SEASON 2 / INTERVIEW</span>
+        <h2>神咲夏色</h2>
+    </div>
+
+    <div class="interview-detail-image">
+        <img src="images/natu.webp" alt="神咲夏色">
+    </div>
+
+    <div class="interview-question">
+        <h3>Q1. 最近の挑戦は？</h3>
+        <p>
+            ボク、最近あみのバズリウムコーデ探しに行ったんだ！
+            マウンテンリーフバズリウム、案外似合ってたよあみ！！
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q2. 好きなステージは？</h3>
+        <p>
+            みんなが一緒に盛り上がれるステージ！
+            大きな声援が聞こえると、もっと頑張りたくなるんだ！
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q3. これからの目標は？</h3>
+        <p>
+            世界中の人にボクの魔法を届けること！
+            もっともっと大きなステージに立ちたいな！
+        </p>
+    </div>
+
+    <a href="#season2" class="interview-back">↑ SEASON 2へ戻る</a>
+
+</section>
+
+
+
+<!-- 柏木亜美華 -->
+
+<section id="interview-ami"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+        <span>SEASON 2 / INTERVIEW</span>
+        <h2>柏木亜美華</h2>
+    </div>
+
+    <div class="interview-detail-image">
+        <img src="images/ami.jpg" alt="柏木亜美華">
+    </div>
+
+    <div class="interview-question">
+        <h3>Q1. お花の魅力って何？</h3>
+        <p>
+         毎日違う表情を見せてくれるんです。
+         毎日見てて苦痛じゃないんですよね。
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q2. ライブで届けたいものは？</h3>
+        <p>
+           星舞恋魔として、これからもたくさんの魔法を届けていきたいです。
+
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q3. これから咲かせたい花は？</h3>
+        <p>
+            まだ名前のない、新しいお花です。
+            私だけの輝きを見つけていきたいです！
+        </p>
+    </div>
+
+    <a href="#season2" class="interview-back">↑ SEASON 2へ戻る</a>
+
+</section>
+
+
+
+<!-- 星宵ゆあ -->
+
+<section id="interview-yua"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+        <span>SEASON 2 / INTERVIEW</span>
+        <h2>星宵ゆあ</h2>
+    </div>
+
+    <div class="interview-detail-image">
+        <img src="images/yua.jpg" alt="星宵ゆあ">
+    </div>
+
+    <div class="interview-question">
+        <h3>Q1. もう一度歌いたいと思った理由は？</h3>
+        <p>
+            もう一度だけ、自分の歌を誰かに届けてみたいと思ったから。
+            歌うことが嫌いになったわけじゃなかったから……。
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q2. 歌うときに考えていることは？</h3>
+        <p>
+            聴いてくれる人のこと。
+            私の歌が、その人にとって少しでも大切なものになればいいなって思ってる。
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q3. これから見つけたいものは？</h3>
+        <p>
+            私だけの歌。
+            私にしか歌えないものを、少しずつ見つけていきたい。
+        </p>
+    </div>
+
+    <a href="#season2" class="interview-back">↑ SEASON 2へ戻る</a>
+
+</section>
+
+
+
+<!-- 夜沙暗ろまん -->
+
+<section id="interview-roma"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+        <span>SEASON 2 / INTERVIEW</span>
+        <h2>夜沙暗ろまん</h2>
+    </div>
+
+    <div class="interview-detail-image">
+        <img src="images/roma.jpg" alt="夜沙暗ろまん">
+    </div>
+
+    <div class="interview-question">
+        <h3>Q1. ステージで大切にしていることは？</h3>
+        <p>
+            ……見てくれる人の気持ち。
+            私のステージを見て、何かを感じてもらえたら……嬉しいです。
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q2. 先輩に伝えたいことは？</h3>
+        <p>
+            ……ごめんなさい。
+            それと……ありがとうございます。
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q3. これから叶えたいことは？</h3>
+        <p>
+            ……もう一度、みんなと一緒に笑えるステージに立つことです。
+        </p>
+    </div>
+
+    <a href="#season2" class="interview-back">↑ SEASON 2へ戻る</a>
+
+</section>
+
+
+
+<!-- 雪野リア -->
+
+<section id="interview-ria"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+        <span>THEATRICAL VERSION / INTERVIEW</span>
+        <h2>雪野リア</h2>
+    </div>
+
+    <div class="interview-detail-image">
+        <img src="images/ria.jpg" alt="雪野リア">
+    </div>
+
+    <div class="interview-question">
+        <h3>Q1. 自分のことをどう思ってる？</h3>
+        <p>
+            ……まだ、よくわからないの。
+            私が誰なのか、何をしたいのか……これから思い出したいな。
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q2. ステージに立ったとき、何を感じる？</h3>
+        <p>
+            不思議な感じ。
+           あったかくて、大好きがあふれてくるんだ。
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q3. これから知りたいことは？</h3>
+        <p>
+            私がここにいる理由かなぁ。
+            それから…………ううん、なんでもない
+        </p>
+    </div>
+
+    <a href="#season2" class="interview-back">↑ SEASON 2へ戻る</a>
+
+</section>
+
+
+
+<!-- ？？？ -->
+
+<section id="interview-mystery"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+        <span>THEATRICAL VERSION / SECRET</span>
+        <h2>？？？</h2>
+    </div>
+
+    <div class="interview-detail-image">
+
+        <span class="interview-mystery-mark">
+            ???
+        </span>
+
+    </div>
+
+    <div class="interview-question">
+        <h3>Q1. あなたは誰？</h3>
+        <p>
+            ……それは、まだ秘密だよ！！！！！！！
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q2. アイプリバースを知っている？</h3>
+        <p>
+            もちろん。
+            リアとずっと一緒に歌ってたもん！！！
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q3. これからどうしたい？</h3>
+        <p>
+            リアちゃんを見つけて、アイプリバースでもう一回歌いたい！！！！！
+        </p>
+    </div>
+
+    <a href="#season2" class="interview-back">↑ SEASON 2へ戻る</a>
+
+</section>
+
+
+
+<!-- =====================================
+     SEASON 3 INTERVIEW
+===================================== -->
+
+
+<!-- リリス -->
+
+<section id="interview-lilith"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+        <span>SEASON 3 / INTERVIEW</span>
+        <h2>リリス=ブライト</h2>
+    </div>
+
+    <div class="interview-detail-image">
+        <img src="images/lilith.jpg" alt="リリス=ブライト">
+    </div>
+
+    <div class="interview-question">
+        <h3>Q1. アイプリバースをどう思っている？</h3>
+        <p>
+       そんなのどうでもいいですわ、打倒一ノ瀬りぃ。これ以外興味ありませんもの
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q2. ルナとの関係は？</h3>
+        <p>
+          ルナはわたくしが守らなければいけない相手ですの。<br>
+          ブライト家は、恐ろしいのですから。
+
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q3. これからやりたいことは？</h3>
+        <p>
+            日本のアイプリバースを、わたくしたち一色に染め上げることですわね。
+        
+        </p>
+    </div>
+
+    <a href="#season3" class="interview-back">↑ SEASON 3へ戻る</a>
+
+</section>
+
+
+
+<!-- ルナ -->
+
+<section id="interview-luna"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+        <span>SEASON 3 / INTERVIEW</span>
+        <h2>ルナ=ブライト</h2>
+    </div>
+
+    <div class="interview-detail-image">
+        <img src="images/luna.jpg" alt="ルナ=ブライト">
+    </div>
+
+    <div class="interview-question">
+        <h3>Q1. リリスさんのことをどう思ってる？</h3>
+        <p>
+            絶対負けない最強のお姉さまなんだぞ♪
+            誰かに屈することも負けることもないんだ☆
+
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q2. 最近の趣味は？</h3>
+        <p>
+            んー、最近のボクの趣味？
+            アイスクリーム作ることだぞ☆
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q3. これからやるべきことって？</h3>
+        <p>
+            日本のアイプリバースをボクたちのものにすること！
+            お姉さまとなら絶対成し遂げられるんだぞ☆
+            
+        </p>
+    </div>
+
+    <a href="#season3" class="interview-back">↑ SEASON 3へ戻る</a>
+
+</section>
+
+
+
+<!-- 一夜ねむ -->
+
+<section id="interview-nemu"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+        <span>SEASON 3 / INTERVIEW</span>
+        <h2>一夜ねむ</h2>
+    </div>
+
+    <div class="interview-detail-image">
+        <img src="images/nemu.webp" alt="一夜ねむ">
+    </div>
+
+    <div class="interview-question">
+        <h3>Q1. 好きな時間は？</h3>
+        <p>
+            ……静かな時間。
+            誰にも邪魔されずに、ゆっくりしている時間が好き……。
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q2. ステージに立つのは好き？</h3>
+        <p>
+            ……嫌いじゃない。
+            みんなが静かに見てくれるなら……。
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q3. これからやってみたいことは？</h3>
+        <p>
+            ……眠くならないくらい、楽しいライブ。
+            ……そんなライブなら、やってみたい。
+        </p>
+    </div>
+
+    <a href="#season3" class="interview-back">↑ SEASON 3へ戻る</a>
+
+</section>
+
+
+
+<!-- 朝倉ハルト -->
+
+<section id="interview-haruto"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+        <span>SEASON 3 / INTERVIEW</span>
+        <h2>朝倉ハルト</h2>
+    </div>
+
+    <div class="interview-detail-image">
+        <img src="images/haruto.webp" alt="朝倉ハルト">
+    </div>
+
+    <div class="interview-question">
+        <h3>Q1. 自分を一言で表すなら？</h3>
+        <p>
+            当然、朝倉ハルト様だ！
+            この俺様に不可能なんてない！
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q2. ステージで意識していることは？</h3>
+        <p>
+            とにかく目立つこと！
+            俺様がステージに立ったら、全員俺様に釘付けだ！
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q3. ライバルに一言！</h3>
+        <p>
+            俺様に勝とうなんて百年早い！
+            だが……いい勝負なら歓迎してやる！
+        </p>
+    </div>
+
+    <a href="#season3" class="interview-back">↑ SEASON 3へ戻る</a>
+
+</section>
+
+
+
+<!-- 瀬那アリス -->
+
+<section id="interview-alice"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+        <span>SEASON 3 / INTERVIEW</span>
+        <h2>瀬那アリス</h2>
+    </div>
+
+    <div class="interview-detail-image">
+        <img src="images/Alice.jpg" alt="瀬那アリス">
+    </div>
+
+    <div class="interview-question">
+        <h3>Q1. アイプリのどんなところが気になる？</h3>
+        <p>
+            べ、別に気になってるわけじゃないけど……
+            みんながどうしてあんなに夢中になれるのかは、ちょっと興味あるかも。
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q2. 自分の好きなところは？</h3>
+        <p>
+            ……自分のことをちゃんと持ってるところ。
+            それくらいよ。
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q3. これからやってみたいことは？</h3>
+        <p>
+            ……みんなと一緒にステージに立つのも、
+            まあ……悪くないかもね。
+        </p>
+    </div>
+
+    <a href="#season3" class="interview-back">↑ SEASON 3へ戻る</a>
+
+</section>
+
+
+
+<!-- 星宵ゆいか -->
+
+<section id="interview-yuika"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+        <span>SEASON 3 / INTERVIEW</span>
+        <h2>星宵ゆいか</h2>
+    </div>
+
+    <div class="interview-detail-image">
+        <img src="images/yuika.jpg" alt="星宵ゆいか">
+    </div>
+
+    <div class="interview-question">
+        <h3>Q1. ライブの好きなところは？</h3>
+        <p>
+            みんなと一緒に楽しい時間を作れるところ！
+            ライブが終わったあとも、ずっと思い出に残るんだよ♪
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q2. ライブで一番大切なことは？</h3>
+        <p>
+            笑顔！
+            楽しい気持ちは、きっとみんなにも伝わるから♪
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q3. これからどんな思い出を作りたい？</h3>
+        <p>
+            みんなでいーっぱいライブして、
+            「最高だった！」って言える思い出を作りたいな♪
+        </p>
+    </div>
+
+    <a href="#season3" class="interview-back">↑ SEASON 3へ戻る</a>
+
+</section>
+
+
+
+<!-- =====================================
+     SEASON 4 INTERVIEW
+===================================== -->
+
+
+<!-- 虹風ぱる -->
+
+<section id="interview-paru"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+        <span>SEASON 4 / INTERVIEW</span>
+        <h2>虹風ぱる</h2>
+    </div>
+
+    <div class="interview-detail-image">
+        <img src="images/paru.jpg" alt="虹風ぱる">
+    </div>
+
+    <div class="interview-question">
+        <h3>Q1. ゲーム実況の魅力は？</h3>
+        <p>
+            みんなと一緒に盛り上がれるところ！
+            ゲームって、遊んでるだけでもワクワクするんだよね♪
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q2. 実況するときに大切にしていることは？</h3>
+        <p>
+            見ている人が楽しいと思えること！
+            自分だけじゃなくて、みんなで楽しむのが一番だよ！
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q3. これから挑戦したいことは？</h3>
+        <p>
+            大きなステージでゲーム実況ライブ！
+            みんなと一緒に遊べたら絶対楽しいよ！
+        </p>
+    </div>
+
+    <a href="#season4" class="interview-back">↑ SEASON 4へ戻る</a>
+
+</section>
+
+
+
+<!-- 曇日みみ -->
+
+<section id="interview-mimi"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+        <span>SEASON 4 / INTERVIEW</span>
+        <h2>曇日みみ</h2>
+    </div>
+
+    <div class="interview-detail-image">
+        <img src="images/mimi.jpg" alt="曇日みみ">
+    </div>
+
+    <div class="interview-question">
+        <h3>Q1. ぱるちゃんの好きなところは？</h3>
+        <p>
+            いつも楽しそうに笑っているところ。
+            ぱるちゃんが笑っていると、私も嬉しくなるんだ。
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q2. 自分の性格を一言で表すなら？</h3>
+        <p>
+            ……のんびり、かな。
+            でも、大切なことにはちゃんと向き合いたいと思ってるの。
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q3. これから叶えたいことは？</h3>
+        <p>
+            ぱるちゃんがずっと笑っていられるように、
+            私も隣で一緒に楽しい時間を過ごしたい。
+        </p>
+    </div>
+
+    <a href="#season4" class="interview-back">↑ SEASON 4へ戻る</a>
+
+</section>
+
+
+
+<!-- 水森雫 -->
+
+<section id="interview-shizuku"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+        <span>SEASON 4 / INTERVIEW</span>
+        <h2>水森雫</h2>
+    </div>
+
+    <div class="interview-detail-image">
+        <img src="images/sizuku.jpg" alt="水森雫">
+    </div>
+
+    <div class="interview-question">
+        <h3>Q1. 目標にしているアイプリは？</h3>
+        <p>
+            お姉ちゃん！
+            私もお姉ちゃんみたいに、みんなを笑顔にできるアイプリになりたい！
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q2. ステージに立つときに大切にしたいことは？</h3>
+        <p>
+            元気いっぱいに楽しむこと！
+            見てくれる人にも楽しいって思ってもらいたい！
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q3. これから頑張りたいことは？</h3>
+        <p>
+            お姉ちゃんに追いつくこと！
+            いつか一緒にステージに立てたらいいな♪
+        </p>
+    </div>
+
+    <a href="#season4" class="interview-back">↑ SEASON 4へ戻る</a>
+
+</section>
+
+
+
+<!-- 春野あまね -->
+
+<section id="interview-amane"
+         class="interview-detail">
+
+    <div class="interview-detail-header">
+        <span>SEASON 4 / INTERVIEW</span>
+        <h2>春野あまね</h2>
+    </div>
+
+    <div class="interview-detail-image">
+        <img src="images/amane.jpg" alt="春野あまね">
+    </div>
+
+    <div class="interview-question">
+        <h3>Q1. お姉ちゃんのすごいところは？</h3>
+        <p>
+            いつも一生懸命なところ。
+            大変なことがあっても、ちゃんと前を向いてるんだよ。
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q2. 自分もアイプリになりたい？</h3>
+        <p>
+            うん！
+            お姉ちゃんみたいになれるかはわからないけど、私も頑張ってみたいな。
+        </p>
+    </div>
+
+    <div class="interview-question">
+        <h3>Q3. お姉ちゃんに一言！</h3>
+        <p>
+            お姉ちゃん、これからもずっと頑張ってね。
+            私もちゃんと応援してるから！
+        </p>
+    </div>
+
+    <a href="#season4" class="interview-back">↑ SEASON 4へ戻る</a>
+
+</section>
+
+
+</section>
+
+</main>
+
+
+
+<!-- =====================================
+     フッター
+===================================== -->
+
+<footer>
+
+    <p>
+        © みぃのアイプリ
+    </p>
+
+</footer>
+
+
+</body>
+
+</html>
